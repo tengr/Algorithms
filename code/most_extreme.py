@@ -1,3 +1,4 @@
+#most extreme element in an array
 from audioop import avg
 # def solution(a):
 #     if len(a) == 0:
@@ -25,12 +26,16 @@ def solution(A):
     max_ind = 0
     for i in xrange(1,len(A)):
         s += A[i]
-        if A[i] < A[min_ind:
-            ind = i
-        if 
-        
+        if A[i] < A[min_ind]:
+            min_ind = i
+        elif A[i] > A[max_ind]: 
+            max_ind = i
+    if A[max_ind] - s * 1.0 / len(A) > s * 1.0 / len(A) - A[min_ind]:
+        ind = max_ind
+    else:
+        ind = min_ind
     return ind 
     
     
-test = [1,1,1,1]
+test = [-4,-9,3,10]
 print(solution(test))
