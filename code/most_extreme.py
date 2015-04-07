@@ -1,5 +1,4 @@
 #most extreme element in an array
-from audioop import avg
 # def solution(a):
 #     if len(a) == 0:
 #         return -1
