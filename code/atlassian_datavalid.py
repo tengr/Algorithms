@@ -1,4 +1,4 @@
-def check_segment(start, end):
+def check_segment(input, start, end):
     dic = {}
     if input[start] != '|':
         dic[-1] = ''
@@ -32,7 +32,7 @@ def check_segment(start, end):
     return dic
 
 def validate(input):
-    res = check_segment(0, len(input))
+    res = check_segment(input, 0, len(input))
     if -1 in res:
         return '0:0:0:format_error'
     else:
@@ -47,7 +47,7 @@ def validate(input):
         names = {}
         pos = fl_end + 3
         while pos < len(input):
-            res = check_segment(pos, len(input))
+            res = check_segment(input, pos, len(input))
             if -1 in res:
                 return '0:0:0:format_error'
             pos = res.keys()[0] + 3
