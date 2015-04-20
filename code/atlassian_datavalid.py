@@ -14,7 +14,7 @@ def check_segment(start, end):
                 elif input[i+1] == '|':
                     cleanup += 'b'
                     i += 2
-                elif input[i+1] == 'n' and input[i-1] == '|':
+                elif input[i+1] == 'n' and cleanup[-1] == '|':
                     dic[i-1] = cleanup[:-1]
                     return dic
                 else:
@@ -48,6 +48,8 @@ def validate(input):
         pos = fl_end + 3
         while pos < len(input):
             res = check_segment(pos, len(input))
+            if -1 in res:
+                return '0:0:0:format_error'
             pos = res.keys()[0] + 3
             line = res.values()[0]
             print line
@@ -62,8 +64,9 @@ def validate(input):
                     nonempty += 1
             records += 1
             nmfds = max(nmfds, len(fields))
-            empty = records * nmfds - nonempty
-            extra = nmfds - nmfnms
+        nmfds = max(nmfds, nmfnms)
+        empty = records * nmfds - nonempty
+        extra = nmfds - nmfnms
         if extra > 0:
             last_name += ('_'+str(extra))
         return str(records) + ":"+str(nmfds) + ":" + str(empty) + ":" + last_name
