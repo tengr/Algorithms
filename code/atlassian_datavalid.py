@@ -31,7 +31,7 @@ def check_segment(start, end):
             i += 1
     return dic
 
-def solution(input):
+def validate(input):
     res = check_segment(0, len(input))
     if -1 in res:
         return '0:0:0:format_error'
