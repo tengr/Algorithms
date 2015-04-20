@@ -3,6 +3,9 @@
 input = "|name|address|~n|Annie|a@b.com|sdsf.com|~n|brian|sdsdd|~n"
 input = "|name|address|~n|Patrick|patrick@test.com|pat@test.com|~n|Annie|Annie@test.com|~n"
 
+if input[0] != '|'
+    print("0:0:0:format_error")
+    
 pos = input.find('|~n',1)
 fnms = input[1:pos].split('|')
 nmfnms = len(fnms)
