@@ -39,6 +39,14 @@ def validate(input):
         fl_end = res.keys()[0]
         first_line = input[1:fl_end]
         fnms = first_line.split('|')
+        ca = {}
+        for ele in fnms:
+            if len(ele.strip().lower()) == 0:
+                return '0:0:0:format_error'
+            elif ele.strip().lower() in ca:
+                return '0:0:0:format_error'
+            else:
+                ca[ele.strip().lower()] = 1
         nmfnms = len(fnms)
         last_name = fnms[-1]
         records = 0
@@ -60,7 +68,7 @@ def validate(input):
             else:
                 names[name] = 1
             for f in fields:
-                if len(f) > 0:
+                if len(f.strip()) > 0:
                     nonempty += 1
             records += 1
             nmfds = max(nmfds, len(fields))
