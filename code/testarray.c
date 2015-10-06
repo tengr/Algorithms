@@ -15,9 +15,9 @@ int main(){
 			test2[i][j] = 10 * i + j;
 		}
 	}
-	//print_arrays2(test2,3,5);
+	print_arrays2(test2,3,5);
 
-	printf("%lf\n",3.0/0.0);
+	//printf("%lf\n",3.0/0.0);
 }
 
 void print_arrays(int *a, int len){
