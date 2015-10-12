@@ -1,5 +1,3 @@
-package ruichen;
-
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -11,7 +9,7 @@ public class Poker {
     	players = new ArrayList<Player>();
         for(int i = 0; i < cards.size(); i += 5) {
             int id = (i / 5) + 1;
-            players.add(new Player(id, new Hand((ArrayList<Card>) cards.subList(i, i + 4))));
+            players.add(new Player(id, new Hand(new ArrayList<Card>(cards.subList(i, i + 5)))));
         }
 
         for(int i = 0; i < players.size(); i++) {
@@ -30,10 +28,10 @@ public class Poker {
                 System.out.println("Player " + players.get(players.size() - 1).id + " wins.");
             }
             else {
-            	System.out.println("Players " + players.get(players.size() - numberOfWinners).id);
+            	System.out.print("Players " + players.get(players.size() - numberOfWinners).id);
                 for(int i = players.size() - numberOfWinners + 1; i < players.size() - 1; i++) 
                 	System.out.print(", " + players.get(i).id);
-                System.out.println(" and " + players.get(players.size() - 1) + " draw.");
+                System.out.println(" and " + players.get(players.size() - 1).id + " draw.");
             }
          
         }
@@ -49,11 +47,16 @@ public class Poker {
         }
         for(int i = 0; i < args.length; i++) {
             String cardString = args[i].toUpperCase();
-            
-            if(cardString.length() != 2) return null;
-  
-            Card aCard = new Card(Enum.valueOf(Rank.class, "_" + cardString.substring(0,0)), Enum.valueOf(Suit.class, cardString.substring(1, 1)));
-
+            Card aCard = null;
+            try {
+            	aCard = new Card(Enum.valueOf(Rank.class, "_" + cardString.substring(0, 1)), Enum.valueOf(Suit.class, cardString.substring(1, 2)));
+            }
+            catch (IllegalArgumentException e){
+            	//System.out.println("Rank" + cardString.substring(0,1) + "Suit " + cardString.substring(1, 2));
+                //if(cardString.length() != 2) return null;
+            	System.out.println("Error: invalid card name " + "\'" + cardString + "\'");
+            	return null;
+            }
             r.add(aCard);
         }
         return r;
@@ -61,9 +64,10 @@ public class Poker {
 
     public static void main(String[] args) {
         ArrayList<Card> r = parseArguments(args);
-        if(r != null) new Poker(r);
 		//Card aCard = new Card(Enum.valueOf(Rank.class,"_2"), Enum.valueOf(Suit.class,"C"));
 		//System.out.println(aCard.suit + " " + aCard.rank);
+        if(r != null) new Poker(r);
+
     }
 }
 
