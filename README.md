@@ -12,7 +12,7 @@ If you have set up ssh for gitlab:
 $ git clone git@mrlgit.au.ibm.com:information-interaction/SMART-engine.git  
 $ cd 
 
-''' bash
+'''shell
 #!/bin/bash
 
 # mkdir SMART
