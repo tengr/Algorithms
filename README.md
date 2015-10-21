@@ -3,12 +3,12 @@
 The following User Guide is based on Mac Operating System. 
 
 ## Installing Ecplise and WebSphere Application Server(WAS) Liberty runtime
-Follow the steps in https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/
+Follow the steps in https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/  
 the current download link is at http://eclipse.bluemix.net/packages/mars.1/?JEE-MACCOCOA
 
 ##Clone and build projects:
 If you have set up ssh for gitlab:
-$ git clone git@mrlgit.au.ibm.com:information-interaction/SMART-engine.git
+$ git clone git@mrlgit.au.ibm.com:information-interaction/SMART-engine.git  
 $ cd 
 
 
