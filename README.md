@@ -2,7 +2,7 @@
 
 The following User Guide is based on Mac Operating System. 
 
-## Install Ecplise and WebSphere Application Server(WAS) Liberty runtime  
+## Install Ecplise and WAS Liberty runtime  
 Follow the steps in [here](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/).  
 * Download **Eclipse** and **WebSphere Developer Tools for Eclipse**  
 * **WAS Liberty runtime** can be downloaded in [here](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-non-eclipse-environments/).  
@@ -10,7 +10,7 @@ Follow the steps in [here](https://developer.ibm.com/wasdev/downloads/liberty-pr
 * A reference can be found in [here](https://developer.ibm.com/wasdev/docs/developing-applications-wdt-liberty-profile/).  
 * Make sure **Eclipse**, and **WebSphere Developer Tools for Eclipse**, and **WAS Liberty runtime** are all properly installed
 
-##Clone projects `SMART-engine`, `SMART-ui`, and `SMART-config` from Gitlab:
+##Clone projects from Gitlab:
 If you have set up ssh for gitlab:
 ```bash
 	$ git clone git@mrlgit.au.ibm.com:information-interaction/SMART-config.git
@@ -70,6 +70,8 @@ cd $DIR
 * `cav.properties`in `SMART-config` does not need to be copied again.
 * The script that you run every time you make some change in the code and want to see the change should be
 ```bash
+#!/bin/bash
+
 DIR="$(pwd)"
 cd $ENGINE_DIR
 mvn clean package
