@@ -12,7 +12,44 @@ If you have set up ssh for gitlab:
 $ git clone git@mrlgit.au.ibm.com:information-interaction/SMART-engine.git  
 $ cd 
 
+'''bash
+#!/bin/bash
 
+# mkdir SMART
+# cd SMART
+# git clone git@mrlgit.au.ibm.com:information-interaction/SMART-engine.git
+# git clone git@mrlgit.au.ibm.com:information-interaction/SMART-ui.git
+# git clone git@mrlgit.au.ibm.com:information-interaction/SMART-config.git
+# cd SMART-engine
+
+# change according to your setup
+#######################################################
+ENGINE_DIR="/Users/ruichen/Documents/IBM/SMART-engine/"
+UI_DIR="/Users/ruichen/Documents/IBM/SMART-ui/"
+CONFIG_DIR="/Users/ruichen/Documents/IBM/SMART-config/"
+WAS_DIR="/Users/ruichen/Documents/IBM/WebSphereLiberty/"
+#######################################################
+
+DIR="$(pwd)"
+cd $ENGINE_DIR
+mvn clean package
+cd $UI_DIR
+mvn clean package
+cp $CONFIG_DIR/cav.properties $WAS_DIR/usr/servers/defaultServer/cav.properties
+cp $UI_DIR/target/project-smart-ui.war $WAS_DIR/usr/servers/defaultServer/dropins/project-smart-ui.war
+cp $ENGINE_DIR/target/cav-1.0-SNAPSHOT.war $WAS_DIR/usr/servers/defaultServer/dropins/cav.war
+cd $WAS_DIR/usr/servers/defaultServer/dropins/
+rm -rf war
+mkdir war
+mv cav.war war/cav.war 
+cd war
+mkdir cav
+mv cav.war cav/cav.war
+cd cav
+unzip cav.war 
+rm cav.war
+cd $DIR
+'''
 To install ansible run these commands:
 	
 	$ sudo apt-get install software-properties-common
