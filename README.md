@@ -1,6 +1,6 @@
 # Running SMART locally (without GeoTagger)
 
-The following User Guide is based on *Mac* Operating System. 
+The following User Guide is based on ***Mac*** Operating System. 
 
 ## Install Ecplise and WebSphere Application Server(WAS) Liberty runtime
 1.	Follow the steps in https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/  
