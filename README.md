@@ -5,12 +5,13 @@ The following User Guide is based on Mac Operating System.
 ## Installing Ecplise and WebSphere Application Server(WAS) Liberty runtime
 * Follow the steps in https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/  
 * Make sure that Eclipse, WebSphere Developer Tools for Eclipse and the WAS Liberty runtime are all properly installed
-* Other useful references can be found at   https://developer.ibm.com/wasdev/downloads/liberty-profile-using-non-eclipse-environments/ and   https://developer.ibm.com/wasdev/docs/developing-applications-wdt-liberty-profile/  
+* Other useful references can be found at https://developer.ibm.com/wasdev/docs/developing-applications-wdt-liberty-profile/  
 
-##Clone and build projects:
+##Clone 3 projects, SMART-engine, SMART-ui, and SMART-config from Gitlab repository:
 If you have set up ssh for gitlab:
-$ git clone git@mrlgit.au.ibm.com:information-interaction/SMART-engine.git  
-$ cd 
+$ git clone https://mrlgit.au.ibm.com/information-interaction/SMART-engine.git
+$ git clone https://mrlgit.au.ibm.com/information-interaction/SMART-ui.git
+$ git clone https://mrlgit.au.ibm.com/information-interaction/SMART-config.git
 
 ```bash
 #!/bin/bash
