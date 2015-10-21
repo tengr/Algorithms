@@ -48,7 +48,7 @@ To run these plays more conveniently, we provide the script `install_instance.sh
 # test run
 
 	
-1.	Modify the `cav.properties` file, replace `CONSUMER_KEY`, `CONSUMER_SECRET`, with your own ones.
-2.	For streaming, try `setsid python tweepy_streaming_api_Node#.py`, # is the node number, e.g. 1,2,3,4
-3.	Add your own twitter handle to after 'list_of_users' and optionally 'list_of_admins'
-4.	Note that because of the code implementation, comma seperated entires in 'cav.properties' MUST end with a comma ','.
+1.	Open the `cav.properties` file under `WebSphereLiberty/usr/servers/defaultServer/`. 
+2.	replace `CONSUMER_KEY`, `CONSUMER_SECRET`, with your own ones.
+3.	Add your own twitter handle with plus comma `,` after `list_of_users` and optionally `list_of_admins`.
+4.	Note that because of the code implementation, comma seperated entires in 'cav.properties' all MUST END with a comma `,`.
