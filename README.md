@@ -4,8 +4,13 @@ The following User Guide is based on Mac Operating System.
 
 ## Installing Ecplise and WebSphere Application Server(WAS) Liberty runtime
 * Follow the steps in https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/  
-* Make sure that Eclipse, WebSphere Developer Tools for Eclipse and the WAS Liberty runtime are all properly installed
-* Other useful references can be found at https://developer.ibm.com/wasdev/docs/developing-applications-wdt-liberty-profile/  
+* First download Eclipse, and WebSphere Developer Tools for Eclipse and the WAS Liberty runtime are all properly installed
+* WAS Liberty runtime can be downloaded at https://developer.ibm.com/wasdev/downloads/liberty-profile-using-non-eclipse-environments/
+* Alternatively you can install WAS Liberty runtime within Eclipse by selecting `File`->`new`->`other`, then search for `server` and select `next`; select `IBM`-> `WebSphere Application Server Liberty Profile` as server type and select `next;
+* Next, if you have already downloaded WAS Liberty runtime seperately, you can select `Choose an exisiting installation`, otherwise select `install from an archive or a repository`
+* Next select the `Full Platform` version of WAS Liberty runtime
+* Next after selecting `Manually define a new server`, it is important that the server name is left as `defaultServer` because this will be assumed to be true in the future.
+* A reference can be found at https://developer.ibm.com/wasdev/docs/developing-applications-wdt-liberty-profile/  
 
 ##Clone 3 projects, SMART-engine, SMART-ui, and SMART-config from Gitlab repository:
 If you have set up ssh for gitlab:
