@@ -25,7 +25,7 @@ Otherwise:
 ```
 
 ##Customize and run the deployment script
-* Modify environment variables `ENGINE_DIR`, `UI_DIR`, `CONFIG_DIR`, and `WAS` in the script according to your setup.
+* Modify environment variables `ENGINE_DIR`, `UI_DIR`, `CONFIG_DIR`, and `WAS_DIR` in the script according to your setup.
 ```bash
 #!/bin/bash
 
@@ -58,8 +58,35 @@ rm cav.war
 cd $DIR
 ```
 
-# Customize run configuration
+## Customize run configuration
 1.	Open the `cav.properties` file under `WebSphereLiberty/usr/servers/defaultServer/`. 
 2.	replace `CONSUMER_KEY`, `CONSUMER_SECRET`, with your own ones.
 3.	Add your own twitter handle with plus comma "," after `list_of_users` and optionally `list_of_admins`.
 4.	Note that because of the code implementation, comma seperated entires in 'cav.properties' all MUST END with a comma ",".
+
+## Future deployment
+* There is no need to build `SMART-ui` more than once as the same `project-smart-ui.war` will be used throughout (in the current stage of development) 
+* `cav.properties`in `SMART-config` does not need to be copied again.
+* The script that you run every time you make some change in the code and want to see the change should be
+```bash
+DIR="$(pwd)"
+cd $ENGINE_DIR
+mvn clean package
+cp $ENGINE_DIR/target/cav-1.0-SNAPSHOT.war $WAS_DIR/usr/servers/defaultServer/dropins/cav.war
+cd $WAS_DIR/usr/servers/defaultServer/dropins/
+rm -rf war
+mkdir war
+mv cav.war war/cav.war 
+cd war
+mkdir cav
+mv cav.war cav/cav.war
+cd cav
+unzip cav.war 
+rm cav.war
+cd $DIR
+```
+* Note that you might need to restart the WebSphere Application Server for your change to take place.
+
+## Caveats
+* Try running in incognito mode 
+* Authentication issues are known to occur. Try removing the files `engineConfig.json` and `${twitter_handle}.oauth.properties` under `$WAS_DIR/usr/servers/defaultServer/`
