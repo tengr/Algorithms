@@ -12,7 +12,7 @@ If you have set up ssh for gitlab:
 $ git clone git@mrlgit.au.ibm.com:information-interaction/SMART-engine.git  
 $ cd 
 
-'''shell
+```bash
 #!/bin/bash
 
 # mkdir SMART
@@ -49,7 +49,7 @@ cd cav
 unzip cav.war 
 rm cav.war
 cd $DIR
-'''
+```
 To install ansible run these commands:
 	
 	$ sudo apt-get install software-properties-common
