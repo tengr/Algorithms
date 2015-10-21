@@ -59,7 +59,7 @@ cd $DIR
 ```
 
 ## Customize run configuration
-1.	Open file `cav.properties` under `WebSphereLiberty/usr/servers/defaultServer/`. 
+1.	Open file `cav.properties` under `*WebSphereLiberty/usr/servers/defaultServer/`. 
 2.	Replace the value of `CONSUMER_KEY`and `CONSUMER_SECRET` with your own ones.
 3.	Make sure that you have a valid Twitter account. You can get those values by creating an app at https://apps.twitter.com/
 3.	Add your own twitter handle plus a comma "," to `list_of_users` and optionally `list_of_admins`.
