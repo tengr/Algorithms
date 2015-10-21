@@ -2,9 +2,15 @@
 
 The following User Guide is based on Mac Operating System. 
 
-# Installing Ecplise
+## Installing Ecplise and WebSphere Application Server(WAS) Liberty runtime
 Follow the steps in https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/
 the current download link is at http://eclipse.bluemix.net/packages/mars.1/?JEE-MACCOCOA
+
+##Clone and build projects:
+If you have set up ssh for gitlab:
+$ git clone git@mrlgit.au.ibm.com:information-interaction/SMART-engine.git
+$ cd 
+
 
 To install ansible run these commands:
 	
@@ -13,7 +19,7 @@ To install ansible run these commands:
 	$ sudo apt-get update
 	$ sudo apt-get install ansible
 
-# Playbooks
+## Playbooks
 There are 3 playbooks used for deployment. These playbooks are used for creating a new instance on openstack and installing all the required packages and dependencies for crawling and analysing Tweets.
 
 ## Plays:
@@ -42,7 +48,7 @@ To run these plays more conveniently, we provide the script `install_instance.sh
 # test run
 
 	
-1.	Modify the `twitter_authentication.py` file, and replace `CONSUMER_KEY`, `CONSUMER_SECRET`, `ACCESS_TOKEN`, `ACCESS_TOKEN_SECRET`.
+1.	Modify the `cav.properties` file, replace `CONSUMER_KEY`, `CONSUMER_SECRET`, with your own ones.
 2.	For streaming, try `setsid python tweepy_streaming_api_Node#.py`, # is the node number, e.g. 1,2,3,4
-3.	For analysing, try `setsid python results.py #`, # is the node number, e.g. 1,2,3,4
-4.	For checking database, try `source check_db#.sh`, # is the node number, e.g. 1,2,3,4
+3.	Add your own twitter handle to after 'list_of_users' and optionally 'list_of_admins'
+4.	Note that because of the code implementation, comma seperated entires in 'cav.properties' MUST end with a comma ','.
