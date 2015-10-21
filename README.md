@@ -1,17 +1,17 @@
 # Running SMART locally (without GeoTagger)
 
-The following User Guide is based on Mac Operating System. 
+The following User Guide is based on *Mac* Operating System. 
 
-## Installing Ecplise and WebSphere Application Server(WAS) Liberty runtime
-* Follow the steps in https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/  
-* First download Eclipse, and WebSphere Developer Tools for Eclipse and the WAS Liberty runtime are all properly installed
-* WAS Liberty runtime can be downloaded at https://developer.ibm.com/wasdev/downloads/liberty-profile-using-non-eclipse-environments/
-* Alternatively you can install WAS Liberty runtime within Eclipse by selecting `File`->`new`->`other`, then search for `server` and select `next`; select `IBM`-> `WebSphere Application Server Liberty Profile` as server type and select `next;
-* Next, if you have already downloaded WAS Liberty runtime seperately, you can select `Choose an exisiting installation`, otherwise select `install from an archive or a repository`
+## Install Ecplise and WebSphere Application Server(WAS) Liberty runtime
+1.	Follow the steps in https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/  
+2.	Download Eclipse, and WebSphere Developer Tools for Eclipse 
+3.	WAS Liberty runtime can be downloaded at https://developer.ibm.com/wasdev/downloads/liberty-profile-using-non-eclipse-environments/
+4.	Alternatively you can install WAS Liberty runtime within Eclipse by selecting `File`->`new`->`other`, then search for `server` and select `next`; select `IBM`-> `WebSphere Application Server Liberty Profile` as server type and select `next`;
+* select `Choose an exisiting installation` if you have already downloaded WAS Liberty runtime seperately, otherwise select `install from an archive or a repository`.
 * Next select the `Full Platform` version of WAS Liberty runtime
-* Next after selecting `Manually define a new server`, it is important that the server name is left as `defaultServer` because this will be assumed to be true in the future.
+* Next after selecting `Manually define a new server`, it is important that the server name is left as `defaultServer` because this will be assumed to be the case in the future.
 * A reference can be found at https://developer.ibm.com/wasdev/docs/developing-applications-wdt-liberty-profile/  
-
+and the WAS Liberty runtime are all properly installed
 ##Clone 3 projects, SMART-engine, SMART-ui, and SMART-config from Gitlab repository:
 If you have set up ssh for gitlab:
 $ git clone https://mrlgit.au.ibm.com/information-interaction/SMART-engine.git
