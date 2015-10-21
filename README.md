@@ -24,7 +24,7 @@ Otherwise:
 	$ git clone https://mrlgit.au.ibm.com/information-interaction/SMART-config.git
 ```
 
-##Customize and run the deployment script
+## Run deployment script
 * Modify environment variables `ENGINE_DIR`, `UI_DIR`, `CONFIG_DIR`, and `WAS_DIR` in the script according to your setup.
 ```bash
 #!/bin/bash
