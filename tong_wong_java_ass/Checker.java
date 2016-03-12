@@ -1,4 +1,18 @@
 
+public class Fruit(){
+	public void becomeJam(){
+		adfasfs
+	}
+}
+
+public class Apple extends Fruit(){
+	@override
+	public void becomeJam(){
+adfasfssdf
+	}
+}
+
+
 public class Checker {
 
 	    private boolean isRed = true;
@@ -23,6 +37,11 @@ public class Checker {
 	    }
 	    
 	    //creates a checker at row 1 column 1
+
+	    public Checker(){
+	    	this.isRed = true;
+
+	    }
 	    public Checker(boolean isRed) {
 	        this.isRed = isRed;
 	    }
