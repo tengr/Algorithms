@@ -1,0 +1,37 @@
+-- VERSION_4
+-- START DISKCACHE_2
+/Users/ruichen/Documents/Algorithms/.metadata/.plugins/org.eclipse.core.resources/.projects/MSPy/com.python.pydev.analysis/v2_indexcache
+Test|1457943777000000000|/Users/ruichen/Documents/Algorithms/MSPy/MSPy/Test.py
+-- END DISKCACHE
+-- START DICTIONARY
+1
+1=Test
+-- END DICTIONARY
+-- START TREE 1
+22
+alp|0|
+an_|0|
+ann|0|
+arr|0|
+clu|1|club!11@
+cou|0|
+dic|1|dic!11@
+f|1|f!11@
+fac|0|
+fil|1|file_name!11@
+fir|1|first_line!11@
+fo|1|fo!11@
+l|0|
+m|1|m!11@
+mem|2|member!11@members!11@
+n|1|n!11@
+num|0|
+out|1|out_file!11@
+rm|0|
+s|0|
+sep|0|
+spl|1|splitted_line!11@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE
