@@ -5,15 +5,15 @@ long long nums[MAX_N + 1];
 long long dp[MAX_N + 1][5000];
 long long ans[MAX_N + 1][21];
 int mod(int a, int c){
-	if (a < 0) a = -a;
+	if (a < 0) return (a % c + c) % c;
 	return a % c;
 }
 
 long long solve(long long * nums, int N, int M, int D){
-	if (ans[M][D] >= 0) {
-		//printf("ASDFASDFASdfas");
-		return ans[M][D];
-	}
+	// if (ans[M][D] >= 0) {
+	// 	//printf("ASDFASDFASdfas");
+	// 	return ans[M][D];
+	// }
 	int MAX_SUM = 0, a[N + 1];
 	int i, j, k;	
 	for(i = 1; i <= N; i++) {
@@ -32,7 +32,7 @@ long long solve(long long * nums, int N, int M, int D){
 		for(j = MAX_SUM; j >= 0; j--){
 			//if it is possible to take item i
 				//look at all the possible ways to generate sum j - nums[i]
-			for(k = i - 1; k >= 0; k--) {
+			for(k = M - 1; k >= 0; k--) {
 					if(dp[k][j - a[i]] > 0) /*there is some ways for k items to get sum j - nums[i] */{
 						dp[k + 1][j] +=  dp[k][j - a[i]];
 				}	
@@ -52,13 +52,20 @@ long long solve(long long * nums, int N, int M, int D){
 		// printf("===========\n");
 	}
 
-	long long res = 0;
-	int m = 0, sum = 0;
-	for(m = 0; m <= N; m++){
-		ans[m][D] = dp[m][0];
-		for(sum = D; sum <= MAX_SUM; sum += D)
-			ans[m][D] += dp[m][sum];
-	}
+	// long long res = 0;
+	// int m = 0, sum = 0;
+	// for(m = 0; m <= N; m++){
+	// 	ans[m][D] = dp[m][0];
+	// 	for(sum = D; sum <= MAX_SUM; sum += D)
+	// 		ans[m][D] += dp[m][sum];
+	// }
+	long long res = 0, sum = 0;
+	// int m = 0, sum = 0;
+	// for(m = 0; m <= N; m++){
+	// 	ans[m][D] = dp[m][0];
+	for(sum = 0; sum <= MAX_SUM; sum += D)
+		res += dp[M][sum];
+	return res;
 
 	//res = dp[M][0] + dp[M][D];
 	
@@ -75,7 +82,7 @@ long long solve(long long * nums, int N, int M, int D){
 	// }
 
 	//printf("%lld\n", res);
-	return ans[M][D];
+	//return ans[M][D];
 }
 
 void clear_ans(){
@@ -91,14 +98,18 @@ int main () {
 
 	int N, M, Q, D, n, q;
 	int set = 0;
-
+	// printf(" -1 mod -3 = %d\n", (-1) % (-3));
+	// printf(" -1 mod 3 = %d", (-1) % (3));
+	// printf("\n -1 modmod 3 = %d", mod(-1, 3));
+	// printf("\n -9 modmod 4 = %d", mod(-9, 4));
+	// printf("\n -9 mod 4 = %d", -9%4);
 	while(1) {
 		scanf("%d%d", &N, &Q);
 		if(N == 0 && Q == 0) break;
 		printf("SET %d:\n", ++set);
 		for(n = 1; n <= N; n++) scanf("%lld", &(nums[n]));
 		//memset(ans, 0, 201 * 21 *(sizeof(int)));
-		clear_ans();
+		//clear_ans();
 		for(q = 1; q <= Q; q++) {
 			int D,M;
 			scanf("%d%d", &D, &M);
