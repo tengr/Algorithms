@@ -53,9 +53,12 @@ long long solve(long long * nums, int N, int M, int D){
 	}
 
 	long long res = 0;
-	int m = 0;
-	for(m = 0; m <= N; m++) 
-		ans[m][D] = dp[m][0] + dp[m][D];
+	int m = 0, sum = 0;
+	for(m = 0; m <= N; m++){
+		ans[m][D] = dp[m][0];
+		for(sum = D; sum <= MAX_SUM; sum += D)
+			ans[m][D] += dp[m][sum];
+	}
 
 	//res = dp[M][0] + dp[M][D];
 	
