@@ -3,13 +3,17 @@
 #define MAX_N 200
 long long nums[MAX_N + 1];
 long long dp[MAX_N + 1][5000];
-
+long long ans[MAX_N + 1][21];
 int mod(int a, int c){
 	if (a < 0) a = -a;
 	return a % c;
 }
 
 long long solve(long long * nums, int N, int M, int D){
+	if (ans[M][D] >= 0) {
+		//printf("ASDFASDFASdfas");
+		return ans[M][D];
+	}
 	int MAX_SUM = 0, a[N + 1];
 	int i, j, k;	
 	for(i = 1; i <= N; i++) {
@@ -25,7 +29,7 @@ long long solve(long long * nums, int N, int M, int D){
 	dp[0][0] = 1;
 
 	for(i = 1; i <= N; i++){
-		for(j = MAX_SUM; j >= a[i]; j--){
+		for(j = MAX_SUM; j >= 0; j--){
 			//if it is possible to take item i
 				//look at all the possible ways to generate sum j - nums[i]
 			for(k = i - 1; k >= 0; k--) {
@@ -49,9 +53,12 @@ long long solve(long long * nums, int N, int M, int D){
 	}
 
 	long long res = 0;
-	for(j = 0; j <= MAX_SUM; j++) {
-		if(j % D == 0) res += dp[M][j];
-	}
+	int m = 0;
+	for(m = 0; m <= N; m++) 
+		ans[m][D] = dp[m][0] + dp[m][D];
+
+	//res = dp[M][0] + dp[M][D];
+	
 
 	// for(i = N; i >= 1; i--) printf("%d ", a[i]);
 	// printf("\n");
@@ -65,9 +72,17 @@ long long solve(long long * nums, int N, int M, int D){
 	// }
 
 	//printf("%lld\n", res);
-	return res;
+	return ans[M][D];
 }
 
+void clear_ans(){
+	int i, j;
+	for(i = 0; i <= MAX_N; i++){
+		for(j = 0; j <= 20; j++){
+			ans[i][j] = -1;
+		}
+	}
+}
 
 int main () {
 
@@ -79,6 +94,8 @@ int main () {
 		if(N == 0 && Q == 0) break;
 		printf("SET %d:\n", ++set);
 		for(n = 1; n <= N; n++) scanf("%lld", &(nums[n]));
+		//memset(ans, 0, 201 * 21 *(sizeof(int)));
+		clear_ans();
 		for(q = 1; q <= Q; q++) {
 			int D,M;
 			scanf("%d%d", &D, &M);
