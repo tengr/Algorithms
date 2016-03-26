@@ -7,24 +7,17 @@
 int e[MAX_M];
 int nb[MAX_N + 1][MAX_N + 1] = {0};
 int from[MAX_M], to[MAX_M];
-int reachable = 0;
 int visited[MAX_N + 1] = {0};
 
 void dfs(int n, int node){
 	int j;
-	if(visited[node]) return;
-	// if(node == n) {
-	// 	reachable = 1;
-	// 	printf("check\n");
-	// 	return;
-	// }
+	if(visited[n] || visited[node]) return;
 	visited[node] = 1;
 	for(j = 0; j < n; j++){
-		if(nb[node][j] == 0) break;
+		if(nb[node][j] == 0) return;
 		else if(!visited[nb[node][j]]){
 			dfs(n, nb[node][j]);
 		}
-		else return;
 	}
 }
 
@@ -46,7 +39,6 @@ void solve(int n, int m, int * energy){
 
 	for(j = 0; j < m; j++){
 		if (dist[from[j]] > 0 && dist[from[j]] + e[j] > dist[to[j]]){
-			reachable = 0;
 			memset(visited, 0, sizeof(visited));
 			dfs(n, to[j]);
 			if(visited[n]) {
@@ -56,14 +48,6 @@ void solve(int n, int m, int * energy){
 		}
 	}
 
-	// for(j = 0; j < m; j++){
-	// 	if()
-	// }
-	// for(i = 2; i <= n; i++) {
-	// 	for(j = 0; j < m; j++){
-	// 		if(from[j] == 1 && )
-	// 	}
-	// }
 	if(dist[n] <= 0) printf("hopeless\n");
 	else {
 		// reachable = 0;
@@ -101,11 +85,13 @@ int main () {
 		int energy[n + 1];
 		int i, edge_num = 0;
 		memset(nb, 0, sizeof(nb));
+		memset(e, 0, sizeof(e));
+		memset(energy, 0, sizeof(energy));
 		for(i = 1; i <= n; i++){
 			scanf("%d", &(energy[i]));
-			int num_ways, j;
-			scanf("%d", &num_ways);
-			for(j = 0; j < num_ways; j++){
+			int doors, j;
+			scanf("%d", &doors);
+			for(j = 0; j < doors; j++){
 				from[edge_num] = i;
 				scanf("%d", &(to[edge_num]));
 				nb[i][j] = to[edge_num]; 
