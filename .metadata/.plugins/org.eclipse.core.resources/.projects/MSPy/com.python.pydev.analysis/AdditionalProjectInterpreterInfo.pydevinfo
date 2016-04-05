@@ -1,36 +1,29 @@
 -- VERSION_4
 -- START DISKCACHE_2
 /Users/ruichen/Documents/Algorithms/.metadata/.plugins/org.eclipse.core.resources/.projects/MSPy/com.python.pydev.analysis/v2_indexcache
-Test|1457943777000000000|/Users/ruichen/Documents/Algorithms/MSPy/MSPy/Test.py
+Test|1457945677000000000|/Users/ruichen/Documents/Algorithms/MSPy/MSPy/Test.py
+palindromic_anagrams|1457965586000000000|/Users/ruichen/Documents/Algorithms/MSPy/MSPy/palindromic_anagrams.py
 -- END DISKCACHE
 -- START DICTIONARY
-1
-1=Test
+2
+2=Test
+1=palindromic_anagrams
 -- END DICTIONARY
 -- START TREE 1
-22
-alp|0|
-an_|0|
-ann|0|
-arr|0|
-clu|1|club!11@
-cou|0|
+13
+alp|1|alpha_list!11@
+cou|1|count_one!11@
 dic|1|dic!11@
-f|1|f!11@
-fac|0|
-fil|1|file_name!11@
-fir|1|first_line!11@
-fo|1|fo!11@
-l|0|
-m|1|m!11@
-mem|2|member!11@members!11@
-n|1|n!11@
-num|0|
-out|1|out_file!11@
-rm|0|
-s|0|
-sep|0|
-spl|1|splitted_line!11@
+f|2|f!11@f!19@
+fac|1|fact!11@
+fil|2|file_name!11@file_name!19@
+fo|2|fo!19@fo!11@
+l|1|l!19@
+num|1|num_even_letters!11@
+out|2|out_file!19@out_file!11@
+rm|1|rm!11@
+s|1|s!11@
+sep|1|sep!19@
 -- END TREE
 -- START TREE 2
 0
