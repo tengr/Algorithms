@@ -45,7 +45,7 @@ public class Solution205{
 	}
 
 	public static void main(String[] args){
-		String testString = "abbcc";
+		String testString = "abbcc"; "acdbabdcsbasssssee"
 		System.out.println("the result of " + testString + " is " + findLongest(testString));
 	}
 }
