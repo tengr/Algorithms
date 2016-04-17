@@ -6,9 +6,14 @@
 #define PMAX 8000
 #define POW2_32 4294967296
 #define POW2_16 65536
+#define POW2_15 32768
+#define LEN 16
+#define COUNT 50
 int PRIMES[PMAX];
 bool isPrime[PMAX] = {false};
 int count = 0;
+char *coins[8000];
+char *dvs[8000];
 
 /* reverse:  reverse string s in place */
  void reverse(char s[])
@@ -47,11 +52,10 @@ int count = 0;
  }
 
  
-
 /*tested*/
-int getInterp(char s[], int base){
+long long getInterp(char s[], int base){
 	int i = 0;
-	int num = 0;
+	long long num = 0;
 	for(i = 0; i < strlen(s); i++){
 		num = num * base + (s[i] - '0');
 	}
@@ -59,40 +63,47 @@ int getInterp(char s[], int base){
 }
 /*tested*/
 
-int* isJam(char s[]){
+void isJam(char s[]){
 	//int bases[] = {2,4,6,8,10}; //with odd numbers the result will be even, hence not prime
 	int i = 0;
-	int * divisors = malloc(5 * sizeof(int));
-	printf("coin = %s\n", s);
+	int divisors[9];
 	for(i = 2; i <= 10; i++){
-		int interp = getInterp(s, bases[i]);
-		printf("base = %d interp = %d ", i, interp);
+		long long interp = getInterp(s, i);
+		//printf("base = %d interp = %d ", i, interp);
 		int j = 0;
-		for(j = 0; PRIMES[j] * PRIMES[j] <= interp; j++){
+		for(j = 0; PRIMES[j] * PRIMES[j] <= interp && j < 1000; j++){
+			//if(PRIMES[j] * PRIMES[j] > interp) printf("PRIMEJ = %d interp = %d", PRIMES[j], interp);
 			if(interp % PRIMES[j] == 0) {
-				divisors[i] = PRIMES[j];
-				printf("factor = %d \n", PRIMES[j]);
+				divisors[i - 2] = PRIMES[j];
+				//printf("factor = %d \n", PRIMES[j]);
 				j = PMAX;
 				break;
 			}
 		}
-		if(j != PMAX) {divisors[i] = -1; printf("factor = -1 \n");}
-		printf("base = %d factor = 2\n", bases[i] + 1);
+		if(j != PMAX) {return;}
+		//printf("base = %d factor = 2\n", bases[i] + 1);
 	}
-	printf("\n\n");
-
-	return divisors;
+	//printf("\n\n");
+	printf("%s", s);
+	for(i = 0; i < 9; i++){
+		printf(" %d", divisors[i]);
+		//sprintf(dvs[count] + strlen(dvs[count]), " %d", i);
+	}
+	printf("\n");
+	//sprintf(coins[count], "%s", s);
+	count++;
+	//return divisors;
 }
 
-void printResults(char s[]){
-	int i = 0;
-	int * divisors = isJam(s);
-	//printf("%s\n", s);
-	for(i = 0; i < 5; i++){
-		//printf("%d 2 ", divisors[i]);
-	}
-	//printf("\n");
-}
+// void printResults(char s[]){
+// 	int i = 0;
+// 	int * divisors = isJam(s);
+// 	//printf("%s\n", s);
+// 	for(i = 0; i < 5; i++){
+// 		//printf("%d 2 ", divisors[i]);
+// 	}
+// 	//printf("\n");
+// }
 
 
 
@@ -125,15 +136,21 @@ int main () {
 	// printResults("10111011");
 	// printResults("10111101");
 
+	printf("Case #1:\n");
+
 	long long j;
 
-	for(j = 0; j < POW2_16; j++){
-		char tmp[16];
-		itoa (j, tmp, 16);
+	for(j = POW2_15 + 1; j < POW2_16; j = j + 2){
+		char tmp[LEN + 1];
+		itoa (j, tmp, LEN);
 		//printf("%s\n", tmp);
 		isJam(tmp);
+		//if (count == COUNT) break;
 	}
 
+	// for(i = 0; i < count; i++){
+	// 	printf("%s%s\n", coins[i], dvs[i]);
+	// }
 
 	// char s1 = "1111", s2 = "1101";
 	// int dvs = [3,2,5,2,7,2,3,2,11];

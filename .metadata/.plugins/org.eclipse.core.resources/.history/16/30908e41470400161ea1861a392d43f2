@@ -1,0 +1,31 @@
+
+public class VerifyPreorder {
+	public static void main(String[] args){
+		int nums[] = {10,7,3,2,5,8,15,12,18};
+//		/* 			10
+//		 * 		7      15 
+//		 * 	  3  8    12      18
+//		 *  2  5
+//		 *      
+//		 *       
+//		 *
+//		
+		System.out.println(verifyPreorder(nums));
+	}
+	public static boolean verifyPreorder(int[] preorder) {
+        if (preorder == null || preorder.length == 0 || preorder.length == 1) return true;
+        return verifyPreorder(preorder, 0, preorder.length);
+    }
+	
+	public static boolean verifyPreorder(int [] preorder, int start, int end){
+		if (start >= end || start = end - 1) return true;
+		int root = start;
+		int leftStart = root + 1;
+		int rightStart =  root + 1;
+		while(rightStart < end && preorder[rightStart] < root) rightStart++;
+		int rightEnd = rightStart + 1;
+		while(rightEnd < end && preorder[rightEnd] > root) rightEnd++;
+		if(rightEnd < end) return false;
+		else return verifyPreorder(preorder, leftStart, rightStart) && verifyPreorder(preorder, rightStart, rightEnd);
+	}
+}

@@ -1,0 +1,24 @@
+import java.util.Arrays;
+
+
+public class MinCut {
+	public static void main(String[] args) {
+		String s = "abcba";
+		System.out.println(minCut(s));
+	}
+	public static int minCut(String s) {
+		boolean is[][] = new boolean [s.length()][s.length() + 1];
+		for(int i = 0; i < s.length(); i++) Arrays.fill(is[i], false);
+		for(int i = 0; i < s.length(); i++) is[i][i] = is[i][i+1] = true;
+		
+		for(int i = s.length() - 2; i >= 0; i--){
+			for(int j = i + 1; j <= s.length(); i--) {
+				is[i][j] = is[i+1][j-1] && s.charAt(i) == s.charAt(j-1); 
+			}
+		}
+		
+		int dp[] = new int[s.length() + 1]; //minCut for s[:i)
+		for(int i = 1; i <= s.length(); i++) dp[i] = i - 1;
+		
+	}
+}

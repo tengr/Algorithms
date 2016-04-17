@@ -1,0 +1,75 @@
+import java.util.*;
+
+
+public class PalindromePartitioning {
+	public static void main(String [] args) {
+		String s = "abcba";
+		List<List<String>> res = partition(s);
+//		System.out.println(res.size());
+//		for(List<String> l : res){
+//			System.out.println(l.size());
+//			for(String ss : l) {
+//				System.out.print(ss + " ");
+//			}
+//			System.out.println();
+//		}
+	}
+	public static List<List<String>> partition(String s) {
+        List<List<String>> res = new ArrayList<List<String>>();
+        if(s == null || s.length() == 0) return res;
+        boolean rec[][] = new boolean[s.length()+1][s.length()+1];
+        for(int i = 0; i <= s.length(); i++) Arrays.fill(rec[i], false);
+        for(int i = 0; i < s.length(); i++) {rec[i][i] = true; rec[i][i+1] = true;}
+                        
+        for(int len = 2; len <= s.length(); len++){
+        	for(int i = 0; i < s.length(); i++) {
+        		if (i + len - 1 < s.length() && rec[i + 1][i + len - 1] && s.charAt(i) == s.charAt(i + len - 1)){
+        			rec[i][i + len] = true;        			
+        		}
+        }
+        //now all pair s[i:j) palindrome is stored 
+        	
+       } 
+        
+        List<String> currentList = new ArrayList<String>();
+        findLists(s, res, 0, currentList, rec);
+//		for(List<String> ll : res){
+//			System.out.println(ll.size());
+//			for(String ss : ll) {
+//				System.out.print(ss + " ");
+//			}
+//			System.out.println();
+//		}
+        return res;
+    }
+	
+	public static void findLists(String s, List<List<String>> res, int start, List<String> currentList, boolean rec[][]) {
+        if (start == s.length()) {
+            //System.out.print("test ");
+            //for(String ss : currentList) System.out.print(ss + " ");
+            System.out.println();
+        	res.add(currentList);
+        	//currentList.clear();
+			System.out.println("-------------------------");
+    		for(List<String> ll : res){
+    			//System.out.println(ll.size());
+    			for(String ss : ll) {
+    				System.out.print(ss + " ");
+    			}
+    			System.out.println();
+    		}
+			System.out.println("-------------------------");
+
+        	return;
+        }
+        for(int end = start + 1; end < s.length() + 1; end++) {
+        		if(rec[start][end]) {
+        			currentList.add(s.substring(start, end));
+        			findLists(s, res, end, currentList, rec);
+        			currentList.remove(currentList.size() - 1);
+        		}
+        	}
+        }
+        
+	
+}

@@ -1,0 +1,15 @@
+
+public class RotateArray {
+	public static void main(String args){
+		int a[] = {1,2,3,4,5};
+		System.out.println(rotate(a, 3).toString());
+	}
+	public static int[] rotate(int nums[], int k){
+		int preIndex = 0;
+		while(true){
+			int nextIndex = (preIndex + k) % nums.length;
+			
+			if (preIndex == 0) break;
+		}
+	}
+}

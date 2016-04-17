@@ -1,0 +1,54 @@
+
+public class VerifyPreorder {
+	public static void main(String[] args){
+		int nums[] = {1,2,3,4,5};
+		System.out.println(verifyPreoder({1,2,3,4,5));
+	}
+	public boolean verifyPreorder(int[] preorder) {
+        if (preorder == null || preorder.length == 0 || preorder.length == 1) return true;
+        int leftBound = preorder[0];
+        for(int i = 1; i < preorder.length; i++) leftBound = preorder[i] < leftBound ? preorder[i] : leftBound;
+        leftBound--;
+        int root = 0;
+        int rootVal = preorder[root];
+        while(true) {
+            int i = root;
+            while(i + 1 < preorder.length && preorder[i+1] < preorder[i]) {
+                if (preorder[i] <= leftBound) return false;
+                i++;
+            }
+            if (i == preorder.length - 1) break;
+            if (i == root) {
+                leftBound = preorder[i];
+                root = i + 1;
+                rootVal = preorder[root];
+                continue;
+            }
+            int leftMost = i;
+            //start to find the right subtree
+            i = 1;
+            while(leftMost - i > root && leftMost + i < preorder.length){
+                if(preorder[leftMost + i] >= rootVal) {
+                    System.out.println("leftMost + i = " + preorder[leftMost + i] + " rootval = " + rootVal);
+                    System.out.println("---------");
+                    return false;
+                }
+                if(preorder[leftMost + i] > preorder[leftMost - i]) {
+                    leftBound = preorder[leftMost - i];
+                    root = leftMost + i;
+                    rootVal = preorder[root];
+                    break;
+                }
+                System.out.println("---------");
+                i++;
+            }
+            if (i == root) {
+                leftBound = preorder[i];
+                root = i + 1;
+                rootVal = preorder[root];
+            }
+            System.out.println("---------");
+        }
+        return true;
+    }
+}
