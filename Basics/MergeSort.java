@@ -6,19 +6,25 @@ public class MergeSort{
 	public static void main(String[] args){
 		int nums[] = {5,3,2,7,1};
 		printNums(nums);
-		mergeSort(nums, 0, nums.length);
+		mergeSort(nums);
 		printNums(nums);
 		MergeSortTest();
+		
+		int nums3[] = {2, 6, 3, 5, 1, 1, 8};
+		int nums4[] = {12, 16, 333, 50, 1000, 5, 897, 1, 3, 66, 13 };
+		printNums(nums3);
+		mergeSort(nums3);
+		printNums(nums3);
+		printNums(nums4);
+		mergeSort(nums4);
+		printNums(nums4);
 	}
 
-
-
 	public static void MergeSortTest(){
-		
-		for(int time = 0; time < 10; time++){		
+		for(int time = 0; time < 200; time++){		
 		    Random r = new Random();
-		    int[] nums = new int[10];
-		    int[] nums2 = new int[10];
+		    int[] nums = new int[time];
+		    int[] nums2 = new int[time];
 		    for (int i = 0; i < nums.length; i++) {
 		      nums[i] = r.nextInt();
 		    }
@@ -28,7 +34,7 @@ public class MergeSort{
 		    mergeSort(nums2, 0, nums2.length);
 		    assertArrayEquals(nums,nums2);
 		}
-		
+
 		System.out.println("Test Done!");
 	}
 	
@@ -52,10 +58,14 @@ public class MergeSort{
         for(i = s1, k = 0; i < e2; i++, k++) nums[i] = temp[k];
     }    
     
+	public static void mergeSort(int nums[]){
+		mergeSort(nums, 0, nums.length);
+	}
+	
     public static void mergeSort(int[] nums, int start, int end) {
-        if (start == end - 1) return;
+        if (start >= end - 1) return;
         mergeSort(nums, start, start + (end - start) / 2); //end is not inclusive
-        mergeSort(nums, start + (end - start) / 2, nums.length);
-        merge(nums,start, start + (end - start) / 2, start + (end - start) / 2, nums.length);
+        mergeSort(nums, start + (end - start) / 2, end);
+        merge(nums,start, start + (end - start) / 2, start + (end - start) / 2, end);
     }
 }

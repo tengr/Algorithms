@@ -16,6 +16,6 @@ void reverse(char * s) {
 
 int main(){
 	char s[] = "asdfasdfasdfasdfasdf"; 
-	reverse(s);
+	reverse(s)
 	printf("%s", s);
 }

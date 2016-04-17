@@ -1,0 +1,11 @@
+
+public class MinCut {
+	public static void main(String[] args) {
+		String s = "abcba";
+		System.out.println(minCut(s));
+	}
+	public static int minCut(String s) {
+		boolean is[][] = new boolean [s.length()][s.length() + 1];
+		
+	}
+}

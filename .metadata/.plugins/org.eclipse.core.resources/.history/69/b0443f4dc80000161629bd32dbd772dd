@@ -1,0 +1,11 @@
+import static org.junit.Assert.*;
+import java.util.Random;
+
+public class MergeSortTest {
+    Random r = new Random();
+    int[] integers = new int[10];
+    for (int i = 0; i < integers.length; i++) {
+      integers[i] = r.nextInt();
+    }
+
+}
