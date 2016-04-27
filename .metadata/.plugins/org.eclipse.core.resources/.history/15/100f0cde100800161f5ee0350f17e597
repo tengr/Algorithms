@@ -1,0 +1,40 @@
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Set;
+
+public class WordLadder {
+	public static void main(String[] args){
+		WordLadder ins = new WordLadder();
+		Set<String> wordList = new HashSet<String>();
+		wordList.add("a");
+		wordList.add("b");
+		wordList.add("c");
+		System.out.println(ins.ladderLength("a", "c", wordList));
+	}
+    public int ladderLength(String beginWord, String endWord, Set<String> wordList) {
+        if (wordList == null || beginWord == null || endWord == null) return 0;
+        HashMap<String, Integer> visited = new HashMap<String, Integer>();
+        Queue<String> q = new LinkedList<String>();
+        q.add(beginWord);
+        visited.put(beginWord, 0);
+        while(!q.isEmpty()) {
+            String word = q.remove();
+            for(int i = 0; i < word.length(); i++){
+                for(int shift = 0; shift < 26; shift++) {
+                    char c  = (char) ('a' + shift);
+                    String newWord = word.substring(0, i) + (c) + word.substring(i+1);
+                    if(word.charAt(i) != (c+shift) && wordList.contains(newWord) && !visited.containsKey(newWord)){
+                        q.add(newWord);
+                        int newDist = visited.get(word) + 1;
+                        System.out.println(newWord + " " + newDist);
+                        if(newWord.equals(endWord)) return newDist;
+                        visited.put(newWord, newDist);
+                    }
+                }
+            }
+        }
+        return 0;
+    }
+}
