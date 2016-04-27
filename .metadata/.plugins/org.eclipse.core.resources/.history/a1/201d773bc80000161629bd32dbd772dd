@@ -1,7 +1,0 @@
-import static org.junit.Assert.*;
-import java.util.Random;
-
-public class MergeSortTest {
-    Random r = new Random();
-
-}
