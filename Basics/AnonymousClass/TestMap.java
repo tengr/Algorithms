@@ -27,10 +27,14 @@ import java.util.Arrays;
 			}, arr)));
 			System.out.println("=======================");	
 			System.out.println("Lamda Expression");			
-			System.out.println(Arrays.toString(map.map((a)->{System.out.println("lambda");
-			return (Integer) a * (Integer) a;}, arr)));
+			System.out.println(Arrays.toString(map.map((a)->{System.out.println("lambda int to int");
+			return a + a;}, arr)));
 			System.out.println("=======================");	
-			
+			System.out.println("Lamda Expression");	
+			Map<Integer, String> map2 = new Map<Integer, String>();
+			System.out.println(Arrays.toString(map2.map((a)->{System.out.println("lambda int to str");
+			return a + "hello World" + a;}, arr)));
+			System.out.println("=======================");	
 			
 	}
 }
