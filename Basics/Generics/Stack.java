@@ -8,8 +8,15 @@ public class Stack<T> {
 	
 	
 	public static void main(String[] args) {
-		Stack<Integer> stack = new Stack(20);
+		Stack<Integer> stack = new Stack<Integer>();
 		System.out.println(stack.size());
+		for(int i = 0; i < 100; i++) stack.push(i);
+		System.out.println("size = " + stack.size());
+		while(!stack.isEmpty()) {
+			System.out.println(stack.pop());
+		}
+		System.out.println("size = " + stack.size());
+
 	}
 	
 	
@@ -25,12 +32,29 @@ public class Stack<T> {
 	
 	public T pop() {
 		if(!isEmpty()) 
-			return arr[top--];
-		else 
+			return arr[--top];
+		else return null;
+	}
+	
+	protected void resize() {
+		System.out.println("resize");
+		Object[] temp = new Object[size * 2];
+		for(int i = 0; i < top; i++) {
+			temp[i] = arr[i];
+		}
+		size *= 2;
+		arr = (T[]) temp;
+		
+	}
+	
+	public void push(T t) {
+		System.out.println("top = " + top);
+		if (top == size) resize();
+		arr[top++] = t;
 	}
 	
 	public int size() {
-		return this.size;
+		return this.top;
 	}
 	
 	public boolean isEmpty() {
