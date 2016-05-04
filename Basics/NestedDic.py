@@ -26,13 +26,14 @@ def myprin2(d):
 
 dic = {}
 dic["key1"] = {}
-dic["key1"]["key1.1"] = "s1"
+dic["key1"]["key1.1"] = "value1"
 dic["key2"]  = {}
-dic["key2"]["key2.1"] = "s2"
+dic["key2"]["key2.1"] = "value2"
 dic["key2"]["key2.2"] = dic["key1"]
 dic["key2"]["key2.3"] = dic
 
-print myprin2(dic)
+print dic
+#print myprin2(dic)
 
 
 
