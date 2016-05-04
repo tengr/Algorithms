@@ -67,18 +67,22 @@ void dfsRecursive(int node){
 }
 
 void bfsIterative(int node){
+	visited[node] = 1;
 	inq(node);
 	// visited[node] = 1;
 	// printf("%c ", dic[node]);
 	while(start < end){
 		//printf("%d %d\n", start , end);
 		int next_node = dq();
-		if(!visited[next_node]){
-			visited[next_node] = 1;
-			printf("%c ", dic[next_node]);
-			int i;
-			for(i = A; i <= G; i++) if(!visited[i] && g[next_node][i]) inq(i);
+		printf("%c ", dic[next_node]);
+		int i;
+		for(i = A; i <= G; i++) {
+			if(!visited[i] && g[next_node][i]) {
+				visited[i] = 1;
+				inq(i);
+			}
 		}
+		
 		// int j;
 		// for(j = 0; j <= MAX_N; j++) printf("%c ", dic[Q[j]]);
 		// printf("\n");
