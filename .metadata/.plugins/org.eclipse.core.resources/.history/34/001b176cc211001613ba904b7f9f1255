@@ -1,0 +1,23 @@
+package ExceptionPropogation;
+
+public class ExceptionPropogationDemo {
+	public static void main(String[] args) {
+		ExceptionPropogationDemo ins = new ExceptionPropogationDemo();
+			
+	}
+	public void method1() {
+		System.out.println("Method 1 finish.")
+	}
+	public void method2() {
+		System.out.println("Method 2 finish.")
+	}	public void method3() {
+		System.out.println("Method 3 finish.")
+	}	public void method4() {
+		System.out.println("Method 4 finish.")
+	}	public void method5() {
+		System.out.println("Method 5 finish.")
+	}
+	public void method6() {
+		System.out.println("Method 6 finish.")
+	}
+}

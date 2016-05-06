@@ -1,0 +1,14 @@
+package NestedDictionary;
+
+import java.util.HashMap;
+
+public class NestedDictionary {
+	HashMap<String, Object> map;
+	public NestedDictionary() {
+		map = new HashMap<String, Object>();
+		map.put("key1", "s1");
+		map.put("key2", new HashMap<String, Object>());
+		HashMap val = (HashMap)map.get("key2");
+		map.get("key2")
+	}
+}

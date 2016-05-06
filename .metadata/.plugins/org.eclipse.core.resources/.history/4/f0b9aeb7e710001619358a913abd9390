@@ -1,0 +1,77 @@
+package InterviewBitJava;
+import java.util.Arrays;
+import java.util.List;
+public class RepeatNumber {
+	public static void main(String[] args){
+		RepeatNumber ins = new RepeatNumber();
+		System.out.println(ins.repeatedNumber(Arrays.asList(1, 2, 3, 1, 2, 3, 1 )));
+	}
+//	public int repeatedNumber(final List<Integer> a) {
+//	    int count = 2, res = a.get(0);
+//	    for(int i = 1; i < a.size(); i++){
+//	        if(res == a.get(i)) count += 2;
+//	        else count--;
+//	        if(count == 0) {
+//	        	res = a.get(i);
+//	        	count = 2;
+//	        }
+//	    }
+//	    count = 0;
+//	    for(Integer num : a) if(num == res) count++;
+//	    if(count > a.size() / 3) return res;
+//	    else return -1;
+//	}
+	
+	public int repeatedNumber(final List<Integer> a) {
+		   int[] candidates = new int[3];
+		   Arrays.fill(candidates, Integer.MIN_VALUE);
+		   int[] counts = new int[3];
+		   for(Integer num : a) {
+		       boolean inserted = false;
+		       boolean full = true;
+		       int idx = -1;
+		       for(int i = 0; i < 3; i++) {
+		           if(candidates[i] == num) {
+		               inserted = true;
+		               counts[i]++;
+		               break;
+		           }
+		           else if(candidates[i] == Integer.MIN_VALUE) {
+		               full = false;
+		               idx = i;
+		           }
+		       }
+		       if(!inserted) {
+		           if(!full) {candidates[idx] = num; counts[idx] = 1;}
+		           else {
+		                while(true) {
+	    	                for(int i = 0; i < 3; i++) {
+	    	                    counts[i]--;
+	    	                }
+	    	                for(int i = 0; i < 3; i++) {
+	    	                    if(!inserted && counts[i] == 0) {
+	    	                        inserted = true;
+	    	                        candidates[i] = num;
+	    	                        counts[i] = 1;
+	    	                    }
+	    	                }
+	    	                if(inserted) break;
+		                }
+		            }
+		       }
+		   }
+		   Arrays.fill(counts, 0);
+		   for(Integer num : a) {
+		       for(int i = 0; i < 3; i++) if(candidates[i] == num) counts[i]++;
+		   }
+		       
+		   System.out.println(Arrays.toString(candidates));
+		   System.out.println(Arrays.toString(counts));
+		   System.out.println(a.size() / 3);
+		   for(int i = 0; i < 3; i++) {
+		       if(counts[i] > a.size() / 3) return candidates[i];   
+		   }
+		   return -1;
+		}
+
+}

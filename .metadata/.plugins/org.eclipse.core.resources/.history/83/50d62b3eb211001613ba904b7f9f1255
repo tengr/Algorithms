@@ -1,0 +1,36 @@
+package Generics;
+
+public class Stack<T> {
+	private static final int defaultSize = 16;
+	private int size;
+	private T[] arr;
+	
+	
+	public static void main(String[] args) {
+		Stack<Integer> stack = new Stack(20);
+		System.out.println(stack.size());
+	}
+	
+	
+	public Stack() {
+		this(defaultSize);
+	}
+	
+	public Stack(int size) {
+		this.size = size;
+		arr = (T[]) new Object[size];
+	}
+	
+	public T pop() {
+		
+	}
+	
+	public int size() {
+		return this.size;
+	}
+	
+	public boolean isEmpty() {
+		return size() == 0;
+	}
+	
+}

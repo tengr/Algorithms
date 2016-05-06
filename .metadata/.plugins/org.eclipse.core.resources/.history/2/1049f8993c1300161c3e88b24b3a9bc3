@@ -1,0 +1,7 @@
+package InterviewBitJava;
+
+public class Inverse {
+	public int countInverse(final List<Integer> a) {
+		int [] arr = a.toArray();
+	}
+}

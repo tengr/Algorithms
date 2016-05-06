@@ -1,9 +1,0 @@
-
-public class Stock {
-	public static void main(String[] args){
-		Stock ins = new Stock();
-	}
-	public int BuySellWithCoolDown(int [] prices){
-		
-	}
-}

@@ -1,0 +1,17 @@
+package InterviewBitJava;
+
+public class ArrangeHorse {
+	public int arrange(String a, int b) {
+        
+        
+        int[] countW = new int[a.length() + 1], countB = new int[a.length() + 1];
+        int[][] table = new int[a.length() + 1][a.length() + 1];
+        for(int i = 1; i < a.length(); i++) {
+            if(a.charAt(i - 1) == 'W') {
+                countW[i] = countW[i-1] + 1;
+            }
+            else
+            countB[i] = 
+        }
+        
+}

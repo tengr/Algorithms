@@ -1,0 +1,30 @@
+package InterviewBitJava;
+
+import java.util.List;
+
+public class CanCompleteCircuit {
+	public int canCompleteCircuit(final List<Integer> gas, final List<Integer> cost) {
+	    int n = gas.size();
+	    for(int start = 0, end = 0, sum = 0; ;) {
+    	    if(sum >= 0) {
+    	        sum += (gas.get(end) - cost.get(end));
+    	        end = (end + 1) % n;
+    	        if (end == start) return start;
+    	    }
+    	    else {
+    	        while(sum < 0) {
+    	            sum -= (gas.get(start) - cost.get(start));
+    	            start++;
+    	            if (start > n - 1) return -1;
+    	            else if(start > end) {
+    	                end = start;
+    	                break;
+    	            }
+    	        }
+    	        
+    	        
+    	    }
+    	    
+	    }
+    }
+}
