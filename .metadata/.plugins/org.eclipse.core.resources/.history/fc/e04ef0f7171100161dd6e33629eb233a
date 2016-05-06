@@ -1,0 +1,23 @@
+import java.util.Map;
+import java.util.concurrent.*;
+public class CuncurrentCollections {
+	public static void main(String[] args){
+		CuncurrentCollections ins = new CuncurrentCollections();
+		ins.dfs();
+	}
+	public void dfs(){
+		Map<Integer, Integer> map = new ConcurrentHashMap<Integer, Integer>();
+		for(int i = 0; i < 10; i++) map.put(i,i);
+		dfs(map);
+	}
+	public void dfs(Map<Integer, Integer> map) {
+		if(map.isEmpty()) return;
+		for(Integer num : map.keySet()) {
+			System.out.print(num + " ");
+			map.remove(num);
+			dfs(map);
+			map.put(num,num);
+		}
+	}
+	
+}

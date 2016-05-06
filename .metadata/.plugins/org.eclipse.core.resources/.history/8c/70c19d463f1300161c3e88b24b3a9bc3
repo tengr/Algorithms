@@ -1,0 +1,32 @@
+package InterviewBitJava;
+
+public class Inverse {
+	public int countInverse(final List<Integer> a) {
+		int [] arr = a.toArray();
+		return mergeSort(arr, 0, arr.length - 1);
+	}
+	
+	public int mergeSort(int[] arr, int start, int end) {
+		if(start <= end) return 0;
+		int mid = start + (end - start) / 2;
+		mergeSort(arr, start, mid);
+		mergeSort(arr, mid + 1, end);
+		return countInverse(arr, 0, arr.length / 2, arr.length -1);
+	}
+	
+	public int countInverse(int[] arr, int s1, int s2, int end){
+		if(s1 >= s2) return 0;
+		//s1 .. s2-1, s2 .. end
+		int count = 0;
+		int[] temp = new int[end - s1 + 1];
+		for(int i = s1, j = s2, k = 0; i < s2 && j < end + 1; ){
+			if(j == end + 1 || arr[i] <= arr[j]) temp[k++] = arr[i++];
+			else {
+				temp[k++] = arr[j++];
+				count += s2 - i;
+			}
+		}
+		for(int i = s1; i < end + 1; i++) arr[i] = temp[i-s1];
+		return count;
+	}
+}

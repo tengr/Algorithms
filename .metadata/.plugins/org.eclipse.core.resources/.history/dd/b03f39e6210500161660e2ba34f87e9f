@@ -1,9 +1,0 @@
-
-public class FindPeak {
-	public static void main(String[] args){
-		
-	}
-	public int findPeak(int nums[], int start, int end) {
-		
-	}
-}

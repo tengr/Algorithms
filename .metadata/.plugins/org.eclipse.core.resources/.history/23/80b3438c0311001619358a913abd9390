@@ -1,0 +1,34 @@
+package InterviewBitJava;
+
+public class ScrambleString {
+	public static void main(String[] args){
+		ScrambleString ins = new ScrambleString();
+		System.out.println(ins.isScramble("rgtae", "great"));
+	}
+	public int isScramble(final String a, final String b) {
+	    if(a.length() != b.length()) return -1;
+	    for(int start = 0, end = 0; end <= a.length(); ){
+	    	if(end == a.length()) {
+	            if(!isValid(a,b,start,end - 1)) return 0;
+	            else return 1;
+	    	}
+	        if(isValid(a,b,start,end - 1)){
+	            end++;
+	            start = end;
+	        }
+	         else end++;
+	        }
+	        else end++;
+	    } 
+	    return 1;
+	}
+	
+	public boolean isValid(final String a, final String b, int start, int end) {
+	    if(start > end) return true;
+	    boolean same = false; reverse = false;
+	    for(int i = start, j = end; i < j; i++, j--) {
+	        if(a.charAt(i) != b.charAt(j)) return false;
+	    }   
+	    return true;
+	}
+}

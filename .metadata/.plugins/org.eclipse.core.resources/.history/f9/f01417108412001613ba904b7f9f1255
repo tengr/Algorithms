@@ -1,0 +1,65 @@
+package com.atlassian.codetest.grad;
+
+import java.util.AbstractSet;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.Set;
+
+public class ExtendedSetImpl<T> extends AbstractSet<T> implements ExtendedSet<T> {
+	protected Object[] arr;
+	protected int size;	
+	
+    public ExtendedSetImpl(int maxCapacity) {
+        super();
+        arr = new Object[maxCapacity];
+    }
+
+    public ExtendedSetImpl(int maxCapacity, Collection<? extends T> collection) {
+        super();
+        arr = new Object[maxCapacity];   		
+        Object[] temp = collection.toArray(); 
+        for(size = 0; size < temp.length; size++) arr[size] = temp[size]; 
+    }
+
+    public boolean add(T e) {
+    	if(size() == arr.length) return false;
+    	for(int i = 0; i < size; i++) if()
+        //throw new UnsupportedOperationException();
+    }
+
+    /**
+     * Implementing an iterator here will allow you (and our tests) to use several methods inherited from Set, including
+     * contains(T) and addAll(Collection<T>)
+     */
+    public Iterator<T> iterator() {
+        return new Iterator<T>() {
+
+            //In Java, Iterator instance data goes here
+        	
+
+            public boolean hasNext() {
+                return false;
+            }
+
+            public T next() {
+                return null;
+            }
+        };
+    }
+
+    public int size() {
+        return this.size;
+    }
+
+    public ExtendedSet<T> union(Set<T> secondSetExtension) {
+        return null;
+    }
+
+    public ExtendedSet<T> intersect(Set<T> secondSetExtension) {
+        return null;
+    }
+
+    public ExtendedSet<T> symmetricDifference(Set<T> secondSetExtension) {
+        return null;
+    }
+}

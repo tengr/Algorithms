@@ -1,0 +1,22 @@
+package AnonymousClass;
+
+public class Map<I,O>{
+	I[] map(Function<I,O> func,I[] inp){
+		for(int i=0;i<inp.length;i++){
+			inp[i]  = func.func(inp[i]);
+		}
+		return inp;
+	}
+//	O[] map(Function func,I[] inp){
+//		for(int i=0;i<inp.length;i++){
+//			inp[i]  = (O) func.func(inp[i]);
+//		}
+//		return (O[])inp;
+//	}
+
+
+}
+
+interface Function<I,O>{
+	O func(I input);
+}

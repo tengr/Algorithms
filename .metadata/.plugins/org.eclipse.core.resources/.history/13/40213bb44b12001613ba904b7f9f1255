@@ -1,0 +1,16 @@
+package Generics;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Union<E>{
+	public Set<E> union (Set<E> a, Set<E> b) {
+		Set<E> res = new HashSet<E>();
+		for(E e : a) {
+			if(b.contains(e)) res.add(e);
+		}
+		for(E e : b) {
+			if(a.contains(e)) res.add(e);
+		}
+	}
+}
