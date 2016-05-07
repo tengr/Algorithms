@@ -1,7 +1,0 @@
-package InterviewBitJava;
-
-public class Inverse {
-	public countInverse(final List<Integer> a) {
-		
-	}
-}
