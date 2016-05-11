@@ -1,0 +1,14 @@
+package GoogleCodeJam;
+
+public class Technobabble {
+	int maxLen = 16;
+	String[] first = new String[maxLen];
+
+	Technobabble ins = new Technobabble();
+	
+}
+
+publc public int solve(Scanner sc, int N){
+	
+	}
+	

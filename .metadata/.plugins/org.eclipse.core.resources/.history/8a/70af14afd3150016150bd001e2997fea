@@ -1,0 +1,25 @@
+package CountADigitFromRange;
+
+public class CountOnes {
+	static {
+		int ans[] = new int[Integer.MAX_VALUE];
+		int count = 0;
+		for(int num = 1; num < ans.length; num++) {
+			int c = 0;
+			String s = String.valueOf(num);
+			for(int i = 0; i < s.length(); i++) if(s.charAt(i) == '1') c++;
+			count += c;
+			ans[num] = count;
+		}
+	}
+	
+	
+	
+	public static void main(String[] args) {
+	}
+	
+	long startTime = System.currentTimeMillis();
+	long endTime   = System.currentTimeMillis();
+	long totalTime = endTime - startTime;
+	System.out.println(totalTime);
+}
