@@ -1,0 +1,10 @@
+package GoogleCodeJam;
+
+public class Technobabble {
+	Technobabble ins = new Technobabble();
+	
+}
+
+publc public int solve(Scanner sc, int N);
+	String[] first = new String[1000];
+	

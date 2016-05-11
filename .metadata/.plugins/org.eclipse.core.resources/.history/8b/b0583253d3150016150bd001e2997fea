@@ -1,0 +1,18 @@
+package CountADigitFromRange;
+
+public class CountOnes {
+	static {
+		
+	}
+	
+	
+	
+	public static void main(String[] args) {
+	}
+	
+	long startTime = System.currentTimeMillis();
+	.....your program....
+	long endTime   = System.currentTimeMillis();
+	long totalTime = endTime - startTime;
+	System.out.println(totalTime);
+}

@@ -1,0 +1,5 @@
+package GeekForGeeks;
+
+public interface CountDigitInRange {
+
+}

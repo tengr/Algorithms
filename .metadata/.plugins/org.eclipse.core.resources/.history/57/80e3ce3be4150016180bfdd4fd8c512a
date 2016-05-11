@@ -1,0 +1,65 @@
+package GeekForGeeks;
+
+import java.util.Scanner;
+
+
+public class CountDigitTest {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		
+	}
+	public void input(Scanner sc) {
+		int digit= -1, N = -1;
+		do{
+			System.out.println("digit = ");
+			digit = sc.nextInt();
+			System.out.println("range = ");
+			N = sc.nextInt();
+		}
+		while(0 <= digit && digit <= 9 && N > 0);
+		
+		
+		CountDigitInRange bruteforce = new CountDigitInRange(){
+			@Override
+			public int countinRange(int digit, int N) {
+				if (N < 0) return 0;
+				int ret = 0;
+				char c = (char)('0' + digit);
+				for(int num = 0; num <= N; num++){
+					String s = String.valueOf(N);
+					for(int i = 0; i < s.length(); i++) {
+						if(s.charAt(i) == c) ret++;
+					}
+ 				}
+				return ret;
+			}
+			
+		};
+		
+		
+		
+		CountDigitInRange efficient = new CountDigitInRange(){
+			@Override
+			public int countinRange(int digit, int range) {
+				int ret = 0;
+				int N = range;
+				int pow = 1;
+				int count = 0;
+				//for each loop iteration counting the digit occurence of that specific position
+				do {
+					int d = N % 10;
+					if(d > digit) count = pow;
+					else if(d == digit) count = range % pow + 1;
+					N /= 10;
+					pow *= 10;
+				} while (N > 0);
+				return ret;
+			}
+			
+		};
+		System.out.println("Result  for digit count of " + digit +  " in range 0 - " + N);
+		System.out.println("bruteforce: " + bruteforce.countinRange(digit, N));
+		System.out.println("efficient: " + efficient.countinRange(digit, N));
+	}
+}

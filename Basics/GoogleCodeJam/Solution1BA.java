@@ -1,10 +1,9 @@
 package GoogleCodeJam;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
-public class Solution {
+public class Solution1BA {
 	static HashMap<String, Integer> s2i;
 	static HashMap<Integer, String> i2s;
 	Trie trie = new Trie();
@@ -66,65 +65,47 @@ public class Solution {
  
     
     public static void main(String[] args) {
-    	Solution ins = new Solution();
+    	Solution1BA ins = new Solution1BA();
     	Scanner sc = new Scanner(System.in);
     	for(String s : s2i.keySet()) ins.trie.insert(s);
     	int testCase = sc.nextInt();
     	for(int i = 1; i <= testCase; i++) System.out.println("Case #" + i + ": " + ins.find(ins.trie, sc.next()));
     	sc.close();
-    	
-    	//String input = sc.nextLine();
-//    	String input = "OZONETOWER";
-//    	ins.find(ins.trie, input);
-
-    	//System.out.println("\nfinished");
     }
     
     public String find(Trie trie, String input) {
     	ArrayList<Integer>nums = new ArrayList<Integer>();
-    	ArrayList<Integer>res = new ArrayList<Integer>();
-    	dfs(trie, "", 0, nums, res, input.toCharArray());
-    	//System.out.println(res.toString());
+    	dfs(trie, "", 0, nums, input.toCharArray());
     	StringBuilder sb = new StringBuilder();
-    	for(Integer num : res) sb.append(num);
-    	return sb.toString();
-    	
+    	for(Integer num : nums) sb.append(num);
+    	return sb.toString();	
     }
     
-    public void dfs(Trie trie, String prefix, int totalLength, ArrayList<Integer> nums, ArrayList<Integer>res, char[] message){
-		//System.out.println("length = " + totalLength);
-    	if(totalLength == message.length) {
-    		res.addAll(nums);
-    		return;
-    	}
-    	if(!res.isEmpty()) return;
+    public boolean dfs(Trie trie, String prefix, int totalLength, ArrayList<Integer> nums, char[] message){
+    	if(totalLength == message.length) return true;    	
     	for(int i = 0; i < message.length; i++) {
     		char tempChar = message[i];
     		if(tempChar == (char)'Z' + 1) continue;
     		String temp = prefix + tempChar;
-    		//System.out.println(" temp = " + temp);
     		boolean[] searchRes = trie.search(temp);
     		if(!searchRes[0]) continue; //no further trie nodes
     		else if(searchRes[1]) { //a number word found
-    			//System.out.print(temp);
     			if(nums.isEmpty() || s2i.get(temp) >= nums.get(nums.size() - 1)){
     				nums.add(s2i.get(temp));
-    		    	//for(Integer num : nums) System.out.print(num + " ");
     				message[i] = (char)'Z' + 1;
-    				dfs(trie, "", totalLength + temp.length(), nums, res, message);
+    				if(dfs(trie, "", totalLength + temp.length(), nums, message)) return true;
     				nums.remove(nums.size() - 1);
     				message[i] = tempChar;
     			}
     		}
     		else {
 				message[i] = (char)'Z' + 1;
-				dfs(trie, temp, totalLength, nums, res, message);
+				if(dfs(trie, temp, totalLength, nums, message)) return true;
 				message[i] = tempChar;
     		}
 
     	}
-
-		//System.out.println();
+    	return false;
     }
     
     

@@ -1,0 +1,66 @@
+package GoogleCodeJam;
+
+import java.util.Scanner;
+
+public class Remove {
+	public static void main(String[] args) {
+    	Solution ins = new Solution();
+    	Scanner sc = new Scanner(System.in);
+    	int testCase = sc.nextInt();
+    	for(int i = 1; i <= testCase; i++) System.out.println("Case #" + i + ": " + ins.solve(sc.next()));
+    	sc.close();
+    }
+	public String solve(String s){
+		int[] freq = new int[26];
+		int[] count = new int[10];
+		for(int i = 0; i < s.length(); i++) freq[s.charAt(i) - 'A']++;
+		count[2] = removeTwo(freq, count);
+		count[2] = removeSix(freq, count);
+		count[7] = removeSeven();
+		count[5] = removeFive();
+		count[4] = removeFour();
+		count[1] = removeOne();
+		count[8] = removeEight()
+		
+		
+		
+	}
+	
+	public int removeTwo(int[] freq, int[] count){
+		int wCount = freq['W' - 'A'];
+		count['T'-'A'] -= wCount;
+		count['W'-'A'] -= wCount;
+		count['O'-'A'] -= wCount;
+		return wCount;
+	}
+	
+	public int removeSix(int[] freq, int[] count){
+		int xCount = freq['X' - 'A'];
+		count['S'-'A'] -= xCount;
+		count['I'-'A'] -= xCount;
+		count['X'-'A'] -= xCount;
+		return xCount;
+	}
+	
+	public int removeSeven(int[] freq, int[] count){
+		int sCount = freq['S' - 'A'];
+		count['S'-'A'] -= sCount;
+		count['E'-'A'] -= sCount;
+		count['V'-'A'] -= sCount;
+		count['E'-'A'] -= sCount;
+		count['N'-'A'] -= sCount;
+		return sCount;
+	}
+	
+	public int removeFive(int[] freq, int[] count){
+		int vCount = freq['V' - 'A'];
+		count['F'-'A'] -= vCount;
+		count['I'-'A'] -= vCount;
+		count['V'-'A'] -= vCount;
+		count['E'-'A'] -= vCount;
+		return vCount;
+	}
+	
+	
+	
+}

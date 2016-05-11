@@ -1,0 +1,13 @@
+package GCJ1C;
+
+public class B {
+	
+	
+	
+	boolean solve(int B, int M, char[][] conn) {
+		//exact (n-2) * (n - 1) / 2 for n nodes
+		
+		if ((B-2) * (B-1) / 2 < M) return false;
+		
+	}
+}
