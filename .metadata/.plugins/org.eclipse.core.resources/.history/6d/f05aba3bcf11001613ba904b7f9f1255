@@ -1,6 +1,0 @@
-package NestedDictionary;
-
-public class NestedDictionary {
-	HashMap<String, Object> map;
-	
-}
