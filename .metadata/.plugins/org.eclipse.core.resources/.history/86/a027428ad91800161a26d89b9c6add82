@@ -1,0 +1,49 @@
+package Pramp;
+import java.util.Random;
+
+public class SpiralPrint {
+	
+	
+	public void sPrint() {
+		int[][] matrix = new int[randInt(10,20)][randInt(10,20)];
+		sPrint(matrix);
+	}
+	
+	public void sPrint(int[][] matrix){
+		int rowCount = matrix.length, colCount = matrix[0].length;
+		for(int i = 0; i < rowCount; i++)
+			for(int j = 0; j < colCount; j++) matrix[i][j] = randInt(Integer.MIN_VALUE, Integer.MAX_VALUE);
+		int topLefti = 0, topLeftj = 0;
+		int bottomRighti = rowCount-1, bottomRightj = colCount-1;
+		while(topLefti <= bottomRighti && topLeftj <= bottomRightj) {
+			printUtil(matrix, topLefti, topLeftj, bottomRighti, bottomRightj);
+			topLefti++; topLeftj++;
+			bottomRighti--; bottomRightj--;
+		}
+	}
+	
+	public void printUtil(int[][] matrix, int topLefti, int topLeftj, int bottomRighti, int bottomRightj){
+		for(int j = topLeftj; j <= bottomRightj; j++) System.out.print(matrix[topLefti][j] + " ");
+		for(int i = topLefti+1; i <= bottomRighti; i++) System.out.print(matrix[i][bottomRightj] + " ");
+		for(int j = bottomRightj - 1; j >= topLeftj; j--) System.out.print(matrix[bottomRighti][j] + " ");
+		for(int i = bottomRighti - 1; i >= topLefti-1; i--) System.out.print(matrix[i][topLeftj] + " ");
+	}
+	
+	public int randInt(int min, int max) {
+	
+	    // NOTE: This will (intentionally) not run as written so that folks
+	    // copy-pasting have to think about how to initialize their
+	    // Random instance.  Initialization of the Random instance is outside
+	    // the main scope of the question, but some decent options are to have
+	    // a field that is initialized once and then re-used as needed or to
+	    // use ThreadLocalRandom (if using at least Java 1.7).
+	    Random rand = new Random();
+	
+	    // nextInt is normally exclusive of the top value,
+	    // so add 1 to make it inclusive
+	    int randomNum = rand.nextInt((max - min) + 1) + min;
+	
+	    return randomNum;
+	}
+}
+	
