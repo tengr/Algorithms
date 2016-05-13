@@ -1,0 +1,11 @@
+package Pramp;
+import java.util.Random;
+
+public class SpiralPrint {
+	int [][] matrix = new int[]
+			
+	public sprint(int[][] matrix) {
+		
+	}
+}
+	
