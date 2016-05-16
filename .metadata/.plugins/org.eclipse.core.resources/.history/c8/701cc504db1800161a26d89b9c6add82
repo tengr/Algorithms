@@ -9,8 +9,7 @@ public class SpiralPrint {
 	}
 	
 	public void sPrint() {
-		//int[][] matrix = new int[randInt(3,5)][randInt(3,5)];
-		int[][] matrix = new int[8][0];
+		int[][] matrix = new int[randInt(3,5)][randInt(3,5)];
 		sPrint(matrix);
 	}
 	
