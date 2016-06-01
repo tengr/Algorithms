@@ -12,7 +12,7 @@ public class InputParser {
 			String[] picks = subListToStringArray(numbers, AustrianLotto.NUM_DRAWS, numbers.size() - ret.length);
 			return new Data(drawing, picks, ret);
 		}
-		else if(parseMode == ParseMode.PRODUCTION) {
+		else if(parseMode == ParseMode.MAIN) {
 			String[] picks = subListToStringArray(numbers, AustrianLotto.NUM_DRAWS, numbers.size());
 			return new Data(drawing, picks);
 		}

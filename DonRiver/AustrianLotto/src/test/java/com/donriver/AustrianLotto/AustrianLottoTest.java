@@ -24,19 +24,8 @@ public class AustrianLottoTest extends TestCase{
     {
         return new TestSuite( AustrianLottoTest.class );
     }
-    public void testAustrianLotto(){
-        //assertTrue(true);
-    	try {
-	        singlePickFullyCorrect();
-	        multiplePicksPartiallyCorrect();
-	        singlePickPartiallyCorrect();
-	        runTestFile();
-    	} catch (Exception e){
-    		System.out.println(e.getClass() + "\t" + e.getMessage());
-    	}
-    }
     
-    public void runTestFile() throws InvalidInputException, FileNotFoundException, IOException{
+    public void testFile() throws InvalidInputException, FileNotFoundException, IOException{
         AustrianLotto austrianLotto = new AustrianLotto();
         BufferedReader br = null;
         br = new BufferedReader(new FileReader("src/test/resources/testcases.txt"));
@@ -50,7 +39,7 @@ public class AustrianLottoTest extends TestCase{
        if(br != null) br.close();
     }
 
-    public void multiplePicksPartiallyCorrect() throws InvalidInputException{
+    public void testMultiplePicksPartiallyCorrect() throws InvalidInputException{
         AustrianLotto austrianLotto = new AustrianLotto();
     	int[] expectedResult = { 1,  0,  2,  0,  0,  0,  0 };
         String drawing = "3 11 18 23 37 45";
@@ -58,7 +47,7 @@ public class AustrianLottoTest extends TestCase{
         assert(Arrays.equals(expectedResult, austrianLotto.evaluate(drawing, picks)));
     }
 
-    public void singlePickFullyCorrect() throws InvalidInputException{
+    public void testSinglePickFullyCorrect() throws InvalidInputException{
         AustrianLotto austrianLotto = new AustrianLotto();
         int[] expectedResult = { 0,  0,  0,  0,  0,  0,  1 };
         String drawing = "3 18 23 11 37 45";
@@ -66,7 +55,7 @@ public class AustrianLottoTest extends TestCase{
         assert(Arrays.equals(expectedResult, austrianLotto.evaluate(drawing, picks)));
     }
 
-    public void singlePickPartiallyCorrect() throws InvalidInputException{
+    public void testSinglePickPartiallyCorrect() throws InvalidInputException{
         AustrianLotto austrianLotto = new AustrianLotto();
         int[] expectedResult = { 0,  0,  0,  1,  0,  0,  0 };
         String drawing = "42 26 33 2 13 14";
@@ -75,4 +64,3 @@ public class AustrianLottoTest extends TestCase{
     }
 	
 }
-
