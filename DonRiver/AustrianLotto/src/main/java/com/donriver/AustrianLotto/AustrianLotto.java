@@ -9,7 +9,6 @@ public class AustrianLotto
 	public static final int NUM_DRAWS = 6;
 	public static final int MIN = 1, MAX = 45;
 	private static final String WHITESPACE = "\\s+";
-	//private static final Logger LOGGER = LoggerFactory.getLogger(AustrianLotto.class);
 
 	public static void main(String[] args){
 		System.out.println("Welcome to Austrian Lotto.");
@@ -28,7 +27,7 @@ public class AustrianLotto
 			if(line.equals("Q")) break;
 			input.append(" ");
 			input.append(line);
-			Data inputData = InputParser.parse(input.toString(), ParseMode.PRODUCTION);
+			Data inputData = InputParser.parse(input.toString(), ParseMode.MAIN);
 			System.out.println("Evaluation Result: ");
 			try {
 				System.out.println(Arrays.toString(austrianLotto.evaluate(inputData.drawing, inputData.picks)));
