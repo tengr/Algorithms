@@ -56,6 +56,8 @@ public class AustrianLotto
 	@return int array with all the nubmers in the string
 	*/
 	private int[] stringToIntArray(String s) throws InvalidInputException{
+		if(s.charAt(0) == ' ' || s.charAt(s.length() - 1) == ' ') throw new IllegalArgumentException(s + " should contain no leading or trailing spaces");
+		if(s.length() > 17 || s.length() < 11) throw new IllegalArgumentException(s + " should contain between contains between 11 and 17 characters, inclusive");
 		String[] strArr = s.split(WHITESPACE);
 		if(strArr.length != NUM_DRAWS){
 			throw new InvalidInputException(s + " should contain " + NUM_DRAWS + " numbers instead of " + strArr.length);
@@ -66,6 +68,7 @@ public class AustrianLotto
 		int[] freq = new int[MAX + 1]; //frequency count for numbers in in the string
 		for(String ss : strArr) {
 			int num = 0;
+			if(ss.charAt(0) == '0') throw new IllegalArgumentException("Integers in " + s + " should have no leading zeros");
 			num = Integer.parseInt(ss);
 			if(num < MIN || num > MAX) throw new InvalidInputException(num + " is out of range in " + s);
 			if(freq[num] > 0) throw new InvalidInputException(s + " has a duplicate " + num);
