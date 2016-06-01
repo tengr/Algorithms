@@ -2,18 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="s2i" key="selection"/>
+		<item value="NUM_DRAWS" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="numDraws"/>
 			<item value="dic"/>
 			<item value="synchroni"/>
 			<item value="equals"/>
 			<item value="equal"/>
 		</list>
 		<list key="replacehistory">
+			<item value="NUM_DRAWS"/>
 			<item value="s2i"/>
 		</list>
 	</section>

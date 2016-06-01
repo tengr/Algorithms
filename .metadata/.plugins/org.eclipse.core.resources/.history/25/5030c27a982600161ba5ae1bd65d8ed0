@@ -1,0 +1,59 @@
+package AustrianLotto;
+
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Arrays;
+public class AustrianLotto
+{
+	private static final int numDraws = 6;
+	public int[] evaluate(String drawing, String[] picks) 
+	{
+		// String[] drawingStringArray = drawing.split(" ");
+		// assert drawingStringArray.length == numDraws;
+		
+		HashSet<Integer> drawingSet = new HashSet<Integer>();
+		// for(String aDraw : drawingStringArray) 
+		// {
+		// 	drawingSet.add(Integer.parseInt(aDraw));
+		// }
+		// assert drawingSet.size() == numDraws;
+		for(int aDraw : stringToIntArray(drawing)) drawingSet.add(aDraw);
+		
+		int[] ret = new int[numDraws + 1]; //return
+		
+		for(String pick : picks) evaluatePick(ret, drawingSet, pick);
+	
+		return ret;
+	}
+	/* split string by whitespace 
+	@return int array with all the nubmers in the string
+	*/
+	private int[] stringToIntArray(String s) {
+		String [] arr = s.split(" ");
+		assert arr.length == numDraws : s + " isInvalid";
+		int[] intArr = new int[numDraws];
+		int idx = 0;
+		for(String ss : arr) intArr[idx++] = Integer.parseInt(ss);
+		return intArr;
+	}
+
+	private void evaluatePick(int ret[], HashSet<Integer> drawingSet, String pick) {
+		// String[] pickStringArray = pick.split(" ");
+		// if (pickStringArray.length != numDraws) {
+		// 	throw new Exception("pick " + pick + " invalid: incorrect number of element selected");
+		// }
+		// HashSet<Integer> pickSet = new HashSet<Integer>();
+		// for(String aPick : stringToIntArray()) {
+		// 	pickSet.add(Integer.parseInt(aPick));
+		// }
+		// if (pickSet.size() != numDraws) {
+		// 	throw new Exception("pick " + pick + " invalid: duplicate number exist");
+		// }
+		int countCorrect = 0;
+		for(int draw : stringToIntArray(pick)) 
+		{
+			if(drawingSet.contains(draw)) countCorrect++;
+		}
+		ret[countCorrect]++;
+	}
+}
