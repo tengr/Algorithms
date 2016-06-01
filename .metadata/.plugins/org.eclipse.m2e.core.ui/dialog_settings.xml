@@ -19,6 +19,19 @@
 			<item value="0.0.1-SNAPSHOT"/>
 		</list>
 	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="/Users/ruichen/Documents/Algorithms/DonRiver/AustrianLotto"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
 	<section name="MavenProjectWizardArchetypePage">
 		<item value="All Catalogs" key="catalog"/>
 		<list key="projectNameTemplate">
@@ -32,6 +45,8 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="/Users/ruichen/Documents/Algorithms/DonRiver/AustrianLotto"/>
+			<item value="/Users/ruichen/Documents/COMP90055/readbiomed-asm-re-2e19fd6dfa2b"/>
 			<item value="/Users/ruichen/Documents/Algorithms/Atlassian"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -45,12 +60,16 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="ASM_RE"/>
+			<item value="ASM_RE."/>
 			<item value="Atlassian.one"/>
 		</list>
 		<list key="groupId">
+			<item value="ASM-RE"/>
 			<item value="Atlassian"/>
 		</list>
 		<list key="artifactId">
+			<item value="1.0"/>
 			<item value="one"/>
 		</list>
 		<list key="projectNameTemplate">

@@ -1,0 +1,54 @@
+package AustrianLotto;
+import java.nio.charset.StandardCharsets;
+import java.util.*;
+import java.io.*;
+
+//this is a utility class for parsing input
+public class InputParser {
+	public static Data parse(String s) {
+
+		Scanner sc = new Scanner(stream);
+		ArrayList<Integer> numbers = new ArrayList<Integer>();
+		System.out.println(s);
+		while(sc.hasNextInt()) numbers.add(sc.nextInt()); //getting all the numbers to a list
+		System.out.println(numbers);
+		String draw = subListToString(numbers,0, AustrianLotto.NUM_DRAWS);
+		if(s.indexOf("{", s.indexOf("{")) < 0) { //no result array present
+			String[] picks = subListToStringArray(numbers, AustrianLotto.NUM_DRAWS, numbers.size());
+			return new Data(draw, picks);
+		}
+		else{
+			String[] picks = subListToStringArray(numbers, AustrianLotto.NUM_DRAWS, numbers.size() - AustrianLotto.NUM_DRAWS);
+			int[] ret = new int[AustrianLotto.NUM_DRAWS];
+			for(int i = numbers.size() - AustrianLotto.NUM_DRAWS; i < numbers.size(); i++) ret[i] = numbers.get(i);
+			return new Data(draw, picks, ret);
+		}
+	}
+	
+	private static addAllNumbers(String s, ArrayList<Integer> numbers) {
+		boolean inNumber = true;
+		int num = 0;
+		for(char c : s.toCharArray()){
+			if(c <= '9' && c >= '0') inNumber = true;
+			else {
+				if(inNumber)
+			}
+		}
+	}
+
+	private static String subListToString(ArrayList numbers, int start, int end) {
+		StringBuilder sb = new StringBuilder();
+		for(int i = start; i < end; i++) {
+			sb.append(numbers.get(i) + " ");
+		}
+		return sb.toString().trim();
+	}
+	private static String[] subListToStringArray(ArrayList numbers, int start, int end) {
+		String[] picks = new String[end - start];
+		for(int i = 0; i < picks.length; i++) {
+			picks[i] = String.valueOf(numbers.get(start + i));
+		}
+		return picks;
+	}
+
+}

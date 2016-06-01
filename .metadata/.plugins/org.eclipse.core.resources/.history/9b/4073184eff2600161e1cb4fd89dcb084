@@ -1,0 +1,122 @@
+package AustrianLotto;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Arrays;
+public class AustrianLotto
+{
+	public static final int NUM_DRAWS = 6;
+	public static void main( String[] args )
+    {
+    	// Scanner sc = new Scanner(System.in);
+     //    System.out.println( "Welcome to AustrianLotto: Please Input" );
+     //    System.out.println("1: drawing (six distinct numbers between 1 and 45, inclusive)");
+     //    String drawing = "";
+     //    while(sc.hasNextString()) {
+     //    	drawing += sc.next();
+     //    }
+     //    String picks = "";
+     //    while(sc.hasNextString()) {
+     //    	picks += sc.next();
+     //    }
+     //    System.out.println("2: ")
+        AustrianLotto austrianLotto = new AustrianLotto();
+        austrianLotto.multiplePicksPartiallyCorrect();
+        austrianLotto.singlePickFullyCorrect();
+        austrianLotto.singlePickPartiallyCorrect();
+        
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new FileReader("testcases.txt"));
+            String line = br.readLine();
+            while (line != null) {
+                Data data = InputParser.parse(line);
+                assert(Arrays.equals(data.ret, austrianLotto.evaluate(data.drawing, data.picks)));
+            }
+            if(br != null) br.close();
+        }catch (FileNotFoundException fnfe) {
+            System.err.println(fnfe.getMessage());
+        }catch (IOException ioe) {
+        	System.err.println(ioe.getMessage());
+        }
+    }
+	public void multiplePicksPartiallyCorrect() {
+        AustrianLotto austrianLotto = new AustrianLotto();
+    	int[] expectedResult = new int[] { 1,  0,  2,  0,  0,  0,  0 };
+        String drawing = "3 11 18 23 37 45";
+        String[] picks = {"4 7 14 30 33 35", "1 11 12 25 37 38", "11 18 19 20 21 22"};
+        System.out.println(Arrays.toString(austrianLotto.evaluate(drawing, picks)));
+        System.out.println(Arrays.equals(expectedResult, austrianLotto.evaluate(drawing, picks)));
+    }
+
+    public void singlePickFullyCorrect() {
+        AustrianLotto austrianLotto = new AustrianLotto();
+        int[] expectedResult = { 0,  0,  0,  0,  0,  0,  1 };
+        String drawing = "3 18 23 11 37 45";
+        String[] picks = {"3 11 18 23 37 45"};
+        System.out.println(Arrays.toString(austrianLotto.evaluate(drawing, picks)));
+    }
+
+    public void singlePickPartiallyCorrect() {
+        AustrianLotto austrianLotto = new AustrianLotto();
+        int[] expectedResult = { 0,  0,  0,  0,  0,  0,  1 };
+        String drawing = "42 26 33 2 13 14";
+        String[] picks = {"13 4 36 42 26 12"};
+        System.out.println(Arrays.toString(austrianLotto.evaluate(drawing, picks)));
+    }
+	public int[] evaluate(String drawing, String[] picks) 
+	{
+		// String[] drawingStringArray = drawing.split(" ");
+		// assert drawingStringArray.length == NUM_DRAWS;
+		
+		HashSet<Integer> drawingSet = new HashSet<Integer>();
+		// for(String aDraw : drawingStringArray) 
+		// {
+		// 	drawingSet.add(Integer.parseInt(aDraw));
+		// }
+		// assert drawingSet.size() == NUM_DRAWS;
+		for(int aDraw : stringToIntArray(drawing)) drawingSet.add(aDraw);
+		
+		int[] ret = new int[NUM_DRAWS + 1]; //return
+		
+		for(String pick : picks) evaluatePick(ret, drawingSet, pick);
+	
+		return ret;
+	}
+	/* split string by whitespace 
+	@return int array with all the nubmers in the string
+	*/
+	private int[] stringToIntArray(String s) {
+		String [] arr = s.split(" ");
+		assert arr.length == NUM_DRAWS : s + " isInvalid";
+		int[] intArr = new int[NUM_DRAWS];
+		int idx = 0;
+		for(String ss : arr) intArr[idx++] = Integer.parseInt(ss);
+		return intArr;
+	}
+
+	private void evaluatePick(int ret[], HashSet<Integer> drawingSet, String pick) {
+		// String[] pickStringArray = pick.split(" ");
+		// if (pickStringArray.length != NUM_DRAWS) {
+		// 	throw new Exception("pick " + pick + " invalid: incorrect number of element selected");
+		// }
+		// HashSet<Integer> pickSet = new HashSet<Integer>();
+		// for(String aPick : stringToIntArray()) {
+		// 	pickSet.add(Integer.parseInt(aPick));
+		// }
+		// if (pickSet.size() != NUM_DRAWS) {
+		// 	throw new Exception("pick " + pick + " invalid: duplicate number exist");
+		// }
+		int countCorrect = 0;
+		for(int draw : stringToIntArray(pick)) 
+		{
+			if(drawingSet.contains(draw)) countCorrect++;
+		}
+		ret[countCorrect]++;
+	}
+}
