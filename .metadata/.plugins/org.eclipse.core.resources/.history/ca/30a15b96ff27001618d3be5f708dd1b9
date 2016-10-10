@@ -1,0 +1,14 @@
+package com.donriver.AustrianLotto;
+
+import java.util.Arrays;
+
+public class SinglePickFullyCorrect {
+	public void singlePickFullyCorrect() throws InvalidInputException{
+		System.out.println("SPFC");
+        AustrianLotto austrianLotto = new AustrianLotto();
+        int[] expectedResult = { 0,  0,  0,  0,  0,  0,  1 };
+        String drawing = "3 18 23 11 37 45";
+        String[] picks = {"3 11 18 23 37 45"};
+        assert(Arrays.equals(expectedResult, austrianLotto.evaluate(drawing, picks)));
+    }
+}

@@ -1,0 +1,11 @@
+package com.donriver.AustrianLotto;
+import java.util.Arrays;
+public class SinglePickPartiallyCorrect {
+	public void singlePickPartiallyCorrect() throws InvalidInputException{
+        AustrianLotto austrianLotto = new AustrianLotto();
+        int[] expectedResult = { 0,  0,  0,  1,  0,  0,  0 };
+        String drawing = "42 26 33 2 13 14";
+        String[] picks = {"13 4 36 42 26 12"};
+        assert(Arrays.equals(expectedResult, austrianLotto.evaluate(drawing, picks)));
+    }
+}

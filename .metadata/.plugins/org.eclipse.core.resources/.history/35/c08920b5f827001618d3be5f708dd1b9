@@ -1,5 +1,0 @@
-package com.donriver.AustrianLotto;
-
-public class InvalidInputException extends Exception {
-
-}

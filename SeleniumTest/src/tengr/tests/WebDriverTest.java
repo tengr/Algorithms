@@ -1,0 +1,29 @@
+package tengr.tests;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.Test;
+ 
+
+public class WebDriverTest extends TestBase{
+  private String baseUrl = "http://todomvc.com/";
+
+
+  @Test
+  public void testJavaWebDriver() throws Exception {
+	  	getDriver().get(baseUrl + "examples/angularjs/#/");
+	    getDriver().findElement(By.id("new-todo")).clear();
+	    getDriver().findElement(By.id("new-todo")).sendKeys("to-do");
+	    getDriver().findElement(By.id("filters")).click();
+	    getDriver().findElement(By.xpath("//ul[@id='todo-list']/li/form/input")).clear();
+	    getDriver().findElement(By.xpath("//ul[@id='todo-list']/li/form/input")).sendKeys("to-do1");
+	    getDriver().findElement(By.xpath("(//input[@type='checkbox'])[2]")).click();
+	    getDriver().findElement(By.xpath("(//input[@type='checkbox'])[2]")).click();
+	    getDriver().findElement(By.id("new-todo")).clear();
+	    getDriver().findElement(By.id("new-todo")).sendKeys("to-do2");
+	    getDriver().findElement(By.id("toggle-all")).click();
+	    getDriver().findElement(By.linkText("Completed")).click();
+	    getDriver().findElement(By.cssSelector("button.destroy")).click();
+	    getDriver().findElement(By.id("clear-completed")).click();
+    Thread.sleep(2000);
+  }
+}

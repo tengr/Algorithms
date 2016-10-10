@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="Failed suite [Parallel test runs]" parallel="tests">
+  <test name="T_01(failed)" parallel="tests">
+    <classes>
+      <class name="tengr.tests.WebDriverTest">
+        <methods>
+          <include name="testJavaWebDriver"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- tengr.tests.WebDriverTest -->
+    </classes>
+  </test> <!-- T_01(failed) -->
+</suite> <!-- Failed suite [Parallel test runs] -->
