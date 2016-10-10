@@ -1,0 +1,21 @@
+package VigenereCipher;
+
+public class VigenereCipher {
+	public static void main(String[] args){
+		System.out.println(decipher("LXFOPVEFRNHR", "LEMON"));
+	}
+	
+	public static String decipher(String cipherText, String key) {
+		StringBuilder realKey = new StringBuilder(key);
+		int pos = 0;
+		while(realKey.length() < cipherText.length()) {
+			realKey.append(key.charAt(pos));
+			pos = (pos + 1) % key.length();
+		}
+		StringBuilder ret = new StringBuilder();
+		for(int i = 0; i < cipherText.length(); i++) {
+			ret.append(cipherText.charAt(i) + (realKey.charAt(i) - 'A'));
+		}
+		return ret.toString();
+	}
+}

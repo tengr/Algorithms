@@ -95,7 +95,7 @@ public class InputParser {
 	 * @param  numbers                ArrayList to be modified in place
 	 * @return                        an ArrayList containing all numbers in string
 	 */
-	private static ArrayList<Integer> addNumberFromString(String s){
+	private static ArrayList<Integer> addNumberFromString(String s) throws {
 		int num = -1;
 		ArrayList<Integer> nums = new ArrayList<Integer>();
 		for(char c : s.toCharArray()){

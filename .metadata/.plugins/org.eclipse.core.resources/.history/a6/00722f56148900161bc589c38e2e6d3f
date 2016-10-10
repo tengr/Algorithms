@@ -1,0 +1,18 @@
+package SortHashMap;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.TreeMap;
+
+public class SortHashMap {
+	class ValueComparator implements Comparator<String> {
+		
+	}
+	public static void main(String[] args) {
+		HashMap<String, Integer> aMap = new HashMap<>();
+	}
+	
+	private static TreeMap<String, Integer> sort(HashMap<String, Integer> map) {
+		Comparator<> comp = new Comparator<>();
+	}
+	
+}

@@ -1,0 +1,87 @@
+package tengr.tests;
+
+import java.io.File;
+import java.util.NoSuchElementException;
+import java.util.concurrent.TimeUnit;
+import java.net.MalformedURLException;
+import java.net.URL;
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.junit.*;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import static org.junit.Assert.*;
+
+public class WebDriverTest extends TestBase{
+  protected ThreadLocal<RemoteWebDriver> threadDriver = null;
+  private String baseUrl;
+  private boolean acceptNextAlert = true;
+  private StringBuffer verificationErrors = new StringBuffer();
+  private static ChromeDriverService service;
+
+
+  @Test
+  public void testJavaWebDriver() throws Exception {
+    getDriver().get(baseUrl + "/examples/angularjs/#/");
+    getDriver().findElement(By.id("new-todo")).clear();
+    getDriver().findElement(By.id("new-todo")).sendKeys("todo1");
+    getDriver().findElement(By.cssSelector("label.ng-binding")).click();
+    getDriver().findElement(By.xpath("//ul[@id='todo-list']/li/form/input")).clear();
+    getDriver().findElement(By.xpath("//ul[@id='todo-list']/li/form/input")).sendKeys("todo2");
+    getDriver().findElement(By.xpath("(//input[@type='checkbox'])[2]")).click();
+    getDriver().findElement(By.xpath("(//input[@type='checkbox'])[2]")).click();
+    getDriver().findElement(By.id("new-todo")).clear();
+    getDriver().findElement(By.id("new-todo")).sendKeys("todo3");
+    getDriver().findElement(By.id("toggle-all")).click();
+    getDriver().findElement(By.linkText("Completed")).click();
+    getDriver().findElement(By.cssSelector("button.destroy")).click();
+    getDriver().findElement(By.id("clear-completed")).click();
+  }
+
+  @After
+  public void tearDown() throws Exception {
+    getDriver().quit();
+    String verificationErrorString = verificationErrors.toString();
+    if (!"".equals(verificationErrorString)) {
+      fail(verificationErrorString);
+    }
+  }
+
+  private boolean isElementPresent(By by) {
+    try {
+      getDriver().findElement(by);
+      return true;
+    } catch (NoSuchElementException e) {
+      return false;
+    }
+  }
+
+  private boolean isAlertPresent() {
+    try {
+      getDriver().switchTo().alert();
+      return true;
+    } catch (NoAlertPresentException e) {
+      return false;
+    }
+  }
+
+  private String closeAlertAndGetItsText() {
+    try {
+      Alert alert = getDriver().switchTo().alert();
+      String alertText = alert.getText();
+      if (acceptNextAlert) {
+        alert.accept();
+      } else {
+        alert.dismiss();
+      }
+      return alertText;
+    } finally {
+      acceptNextAlert = true;
+    }
+  }
+}

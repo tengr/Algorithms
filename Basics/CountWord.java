@@ -43,4 +43,17 @@ public class CountWord{
 		if(inWord) count++;
 		return count;
 	}
+	
+	public static int countWords2(char s[]) {
+		if(s == null) return 0;
+		boolean inWord = false;
+		int count = 0;
+		for(int i = 0; i < s.length; i++) {
+			if(!Character.isWhitespace(s[i]) && !inWord) {
+				inWord = true;
+				count++;
+			}
+		}
+		return count;
+	}
 }
