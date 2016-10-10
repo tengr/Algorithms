@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="tengr.tests.TestBase">
+        <methods>
+          <include name="testJavaWebDriver"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- tengr.tests.TestBase -->
+      <class name="tengr.tests.IETest">
+        <methods>
+          <include name="testJavaWebDriver"/>
+        </methods>
+      </class> <!-- tengr.tests.IETest -->
+      <class name="tengr.tests.ChromeTest">
+        <methods>
+          <include name="testJavaWebDriver"/>
+        </methods>
+      </class> <!-- tengr.tests.ChromeTest -->
+      <class name="tengr.tests.FirefoxTest">
+        <methods>
+          <include name="testJavaWebDriver"/>
+        </methods>
+      </class> <!-- tengr.tests.FirefoxTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
