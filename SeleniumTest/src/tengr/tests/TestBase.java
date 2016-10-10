@@ -2,13 +2,9 @@ package tengr.tests;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -17,7 +13,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
  
 public class TestBase {
- 
     protected ThreadLocal<RemoteWebDriver> threadDriver = null;
     protected DesiredCapabilities caps = new DesiredCapabilities();
     public static final String KEY = "b4e0388322e22fabaa9ab74de01a3110";
@@ -27,28 +22,24 @@ public class TestBase {
     @BeforeMethod
     public void setUp() throws MalformedURLException {
         threadDriver = new ThreadLocal<RemoteWebDriver>();        
-        setBrowser();
+        setBrowser(caps);
         threadDriver.set(new RemoteWebDriver(new URL(URL), caps));
-
     }
     
-    public void setBrowser() {
+    public void setBrowser(DesiredCapabilities caps) {
     	
     }
- 
     public WebDriver getDriver() {
         return threadDriver.get();
     }
     
     @Test
     public void testJavaWebDriver() throws Exception {
-  	//create new to-do
+    	//create new to-do
   	    WebElement newTodo = ((WebElement) threadDriver).findElement(By.id("new-todo"));
   	    newTodo.clear();
   	    newTodo.sendKeys("new to-do");
   	    
-  	    WebElement secondNewTodo = getDriver().findElement(By.id("new-todo"));
-  	    secondNewTodo.sendKeys("second new to-do");
   	    //edit
   	    
   	    Actions actions = new Actions(getDriver());
@@ -98,6 +89,10 @@ public class TestBase {
   	    //getDriver().findElement(By.cssSelector("label.ng-model")).click();
   	    
   	    
+  	    //second new to-do
+  	    WebElement secondNewTodo = getDriver().findElement(By.id("new-todo"));
+	    secondNewTodo.sendKeys("second new to-do");
+  	    
   	    
   	    //remove to-do
   	    getDriver().findElement(By.xpath("id('todo-list')/x:li[1]/x:div/x:button")).click();
@@ -126,6 +121,5 @@ public class TestBase {
     @AfterMethod
     public void closeBrowser() {
         getDriver().quit();
- 
     }
 }
