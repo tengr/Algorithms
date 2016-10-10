@@ -15,8 +15,8 @@ import org.testng.annotations.Test;
 public class TestBase {
     protected ThreadLocal<RemoteWebDriver> threadDriver = null;
     protected DesiredCapabilities caps = new DesiredCapabilities();
-    public static final String KEY = "b4e0388322e22fabaa9ab74de01a3110";
-    public static final String SECRET = "6d9333fa691396536a9a4d683d66a70d";
+    public static final String KEY = "2888c898fd4f8302e394664fa37b15ca";
+    public static final String SECRET = "867c79e2ff182a2dc96bf105c5bfac12";
     public static final String URL = "http://" + KEY + ":" + SECRET + "@hub.testingbot.com/wd/hub";
 
     @BeforeMethod
@@ -37,14 +37,13 @@ public class TestBase {
     public void testJavaWebDriver() throws Exception {
     	//create new to-do
   	    WebElement newTodo = ((WebElement) threadDriver).findElement(By.id("new-todo"));
-  	    newTodo.clear();
   	    newTodo.sendKeys("new to-do");
   	    
-  	    //edit
-  	    
+  	    //edit existing to do
   	    Actions actions = new Actions(getDriver());
-  	    actions.moveToElement(newTodo);
-  	    actions.doubleClick(newTodo).perform();
+  	    WebElement existingTodo = ((WebDriver) threadDriver).findElement(By.className("ng-scope"));
+  	    actions.moveToElement(existingTodo);
+  	    actions.doubleClick(existingTodo).perform();
   	    newTodo.sendKeys("edited new to-do");
   	    
   	    //click complete
@@ -89,23 +88,23 @@ public class TestBase {
   	    //getDriver().findElement(By.cssSelector("label.ng-model")).click();
   	    
   	    
-  	    //second new to-do
-  	    WebElement secondNewTodo = getDriver().findElement(By.id("new-todo"));
-	    secondNewTodo.sendKeys("second new to-do");
+//  	    //second new to-do
+//  	    WebElement secondNewTodo = getDriver().findElement(By.id("new-todo"));
+//	    secondNewTodo.sendKeys("second new to-do");
   	    
   	    
-  	    //remove to-do
-  	    getDriver().findElement(By.xpath("id('todo-list')/x:li[1]/x:div/x:button")).click();
-
-  	    
-  	//    
-//  	    getDriver().findElement(By.xpath("//ul[@id='todo-list']/li/form/input")).clear();
-//  	    getDriver().findElement(By.xpath("//ul[@id='todo-list']/li/form/input")).sendKeys("to-do1");
-//  	    getDriver().findElement(By.xpath("(//input[@type='checkbox'])[2]")).click();
-//  	    getDriver().findElement(By.xpath("(//input[@type='checkbox'])[2]")).click();
-  	    //second to do
-  	    getDriver().findElement(By.id("new-todo")).clear();
-  	    getDriver().findElement(By.id("new-todo")).sendKeys("second to-do");
+//  	    //remove to-do
+//  	    getDriver().findElement(By.xpath("id('todo-list')/x:li[1]/x:div/x:button")).click();
+//
+//  	    
+//  	//    
+////  	    getDriver().findElement(By.xpath("//ul[@id='todo-list']/li/form/input")).clear();
+////  	    getDriver().findElement(By.xpath("//ul[@id='todo-list']/li/form/input")).sendKeys("to-do1");
+////  	    getDriver().findElement(By.xpath("(//input[@type='checkbox'])[2]")).click();
+////  	    getDriver().findElement(By.xpath("(//input[@type='checkbox'])[2]")).click();
+//  	    //second to do
+//  	    getDriver().findElement(By.id("new-todo")).clear();
+//  	    getDriver().findElement(By.id("new-todo")).sendKeys("second to-do");
   	    
   	    //complete all active to-dos
 //  	    getDriver().findElement(By.id("toggle-all")).click();
