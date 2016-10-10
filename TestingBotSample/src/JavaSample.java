@@ -50,8 +50,7 @@ public class JavaSample {
     newTodo.clear();
     newTodo.sendKeys("new to-do");
     
-    WebElement secondNewTodo = driver.findElement(By.id("new-todo"));
-    secondNewTodo.sendKeys("second new to-do");
+    
     //edit
     
     Actions actions = new Actions(driver);
@@ -60,12 +59,11 @@ public class JavaSample {
     newTodo.sendKeys("edited new to-do");
     
     //click complete
-    List<WebElement> checkBoxes = driver.findElements(By.cssSelector("[type=checkbox]"));
-    checkBoxes.get(0).click();
-    checkBoxes.get(0).click();
-    		
+//    WebElement checkBox = driver.findElement(By.xpath("id('todo-list')/x:li[1]/x:div/x:input"));
+//    checkBox.click();
+//    checkBox.click();
     		//findElements(By.cssSelector("[type=checkbox]"));
-    System.out.println(checkBoxes.size());
+    //System.out.println(checkBoxes.size());
 //    List<WebElement> checkBoxes2 = driver.findElements(By.id("toggle-all"));
 //    Actions act = new Actions(driver);
 //    act.moveToElement(checkBoxes2.get(0));
@@ -86,7 +84,9 @@ public class JavaSample {
 //    aCheckBox.click();
     										//input[@type="checkbox" and @ng-model="todo.completed"]
 
-    
+    //second new to-do
+    WebElement secondNewTodo = driver.findElement(By.id("new-todo"));
+    secondNewTodo.sendKeys("second new to-do");
     
     //driver.findElement(By.cssSelector("label.ng-binding")).click();
     //edit to-do
@@ -104,7 +104,7 @@ public class JavaSample {
     
     
     //remove to-do
-    //driver.findElement(By.xpath("//button[@class='destroy']")).click();
+    driver.findElement(By.xpath("id('todo-list')/x:li[1]/x:div/x:button")).click();
 
     
 //    
