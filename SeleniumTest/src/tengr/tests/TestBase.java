@@ -2,6 +2,7 @@ package tengr.tests;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -22,11 +23,11 @@ public class TestBase {
     @BeforeMethod
     public void setUp() throws MalformedURLException {
         threadDriver = new ThreadLocal<RemoteWebDriver>();        
-        setBrowser(caps);
+        setBrowser();
         threadDriver.set(new RemoteWebDriver(new URL(URL), caps));
     }
     
-    public void setBrowser(DesiredCapabilities caps) {
+    public void setBrowser() {
     	
     }
     public WebDriver getDriver() {
@@ -45,6 +46,12 @@ public class TestBase {
   	    actions.moveToElement(existingTodo);
   	    actions.doubleClick(existingTodo).perform();
   	    newTodo.sendKeys("edited new to-do");
+  	    
+  	    
+//  	    //complete exisiting to-do
+//  	    WebElement aCheckBox = driver.findElement(By.xpath("//ul/li/div/input[@type='checkbox']"));
+//	    
+//	    aCheckBox.click();
   	    
   	    //click complete
 //  	    WebElement checkBox = getDriver().findElement(By.xpath("id('todo-list')/x:li[1]/x:div/x:input"));
