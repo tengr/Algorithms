@@ -24,29 +24,6 @@
       </class> <!-- tengr.tests.ChromeTest -->
     </classes>
   </test> <!-- IE(failed) -->
-  <test name="Firefox(failed)" parallel="tests">
-    <classes>
-      <class name="tengr.tests.FirefoxTest">
-        <methods>
-          <include name="closeBrowser"/>
-          <include name="testJavaWebDriver"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- tengr.tests.FirefoxTest -->
-      <class name="tengr.tests.ChromeTest">
-        <methods>
-          <include name="closeBrowser"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- tengr.tests.ChromeTest -->
-      <class name="tengr.tests.IETest">
-        <methods>
-          <include name="closeBrowser"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- tengr.tests.IETest -->
-    </classes>
-  </test> <!-- Firefox(failed) -->
   <test name="Chrome(failed)" parallel="tests">
     <classes>
       <class name="tengr.tests.FirefoxTest">
@@ -70,4 +47,27 @@
       </class> <!-- tengr.tests.IETest -->
     </classes>
   </test> <!-- Chrome(failed) -->
+  <test name="Firefox(failed)" parallel="tests">
+    <classes>
+      <class name="tengr.tests.FirefoxTest">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="testJavaWebDriver"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- tengr.tests.FirefoxTest -->
+      <class name="tengr.tests.ChromeTest">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- tengr.tests.ChromeTest -->
+      <class name="tengr.tests.IETest">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- tengr.tests.IETest -->
+    </classes>
+  </test> <!-- Firefox(failed) -->
 </suite> <!-- Failed suite [Parallel test runs] -->

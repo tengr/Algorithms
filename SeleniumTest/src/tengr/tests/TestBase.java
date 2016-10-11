@@ -2,6 +2,7 @@ package tengr.tests;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -25,6 +26,7 @@ public class TestBase {
         threadDriver = new ThreadLocal<RemoteWebDriver>();        
         setBrowser();
         threadDriver.set(new RemoteWebDriver(new URL(URL), caps));
+        getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
     
     public void setBrowser() {
