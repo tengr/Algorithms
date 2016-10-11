@@ -1,12 +1,22 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Parallel test runs" parallel="tests" thread-count="2">
+<suite name="Parallel test runs" parallel="tests" thread-count="3">
  
-<test name="T_01">
+<test name="Firefox">
     <classes>
-        <class name="tengr.tests.WebDriverTest" ></class>
+        <class name="tengr.tests.FirefoxTest" ></class>
     </classes>
 </test>
  
+<test name="Chrome">
+    <classes>
+        <class name="tengr.tests.ChromeTest" ></class>
+    </classes>
+</test>
 
+<test name="IE">
+    <classes>
+        <class name="tengr.tests.IETest" ></class>
+    </classes>
+</test>
  
 </suite>

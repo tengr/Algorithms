@@ -1,13 +1,10 @@
 import org.openqa.selenium.By;
-import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-
-import com.sun.jna.platform.win32.WinUser.INPUT;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -15,8 +12,8 @@ import java.util.List;
 
 public class JavaSample {
 
-  public static final String KEY = "b4e0388322e22fabaa9ab74de01a3110";
-  public static final String SECRET = "6d9333fa691396536a9a4d683d66a70d";
+  public static final String KEY = "2888c898fd4f8302e394664fa37b15ca";
+  public static final String SECRET = "867c79e2ff182a2dc96bf105c5bfac12";
   public static final String URL = "http://" + KEY + ":" + SECRET + "@hub.testingbot.com/wd/hub";
 
   public static void main(String[] args) throws Exception {
@@ -27,10 +24,10 @@ public class JavaSample {
 //    caps.setCapability("platform", "WIN10");
 //    caps.setCapability("name", "My First Test");
     
-    caps.setCapability("platform", "CAPITAN");
-    caps.setCapability("version", "beta");
-    caps.setCapability("browserName", "chrome");
-    caps.setCapability("name", "My First Test");
+    caps.setCapability("platform", "WIN10");
+	caps.setCapability("version", "dev");
+	caps.setCapability("browserName", "firefox");
+	caps.setCapability("name", "Firefox Test");
 
 
 //    WebDriver driver = new RemoteWebDriver(new URL(URL), caps);
@@ -40,24 +37,41 @@ public class JavaSample {
 //    element.sendKeys("TestingBot");
 //    element.submit();
     
-    WebDriver driver = new RemoteWebDriver(new URL(URL), caps);
-    //driver.get("http://www.google.com/ncr");
-    //WebElement element = driver.findElement(By.name("q"));
-    String baseUrl = "http://todomvc.com/";
-    driver.get(baseUrl + "examples/angularjs/#/");
-    //create new to-do
-    WebElement newTodo = driver.findElement(By.id("new-todo"));
-    newTodo.clear();
-    newTodo.sendKeys("new to-do");
-    
-    
-    //edit
-    
-    Actions actions = new Actions(driver);
-    actions.moveToElement(newTodo);
-    actions.doubleClick(newTodo).perform();
-    newTodo.sendKeys("edited new to-do");
-    
+    	WebDriver driver = new RemoteWebDriver(new URL(URL), caps);
+    	//WebDriver driver = new ChromeDriver();
+    	String baseUrl = "http://todomvc.com/";
+    	driver.get(baseUrl + "examples/angularjs/#/");
+    	//create new to-do
+	    WebElement newTodo = driver.findElement(By.id("new-todo"));
+	    newTodo.sendKeys("new to-do");
+	    
+	    //edit existing to do
+//	    Actions actions = new Actions(driver);
+//	    WebElement existingTodo = driver.findElement(By.className("ng-binding"));
+//	    actions.moveToElement(existingTodo);
+//	    actions.doubleClick(existingTodo).perform();
+//	    newTodo.sendKeys("edited new to-do");
+  
+	    //complete to-do
+//	    List<WebElement> inputs = driver.findElements(By.tagName("input"));
+//	    System.out.println(inputs.size());
+//	    for(WebElement input : inputs) {
+//	    	System.out.println(input.getAttribute("type"));
+//	    	if(input.getAttribute("ng-model").equals("todo.completed")) {
+//	    		input.click();
+//	    		System.out.println("clicked");
+//	    	}
+//	    }
+	    WebElement aCheckBox = driver.findElement(By.xpath("//ul/li/div/input[@type='checkbox']"));
+	    
+	    aCheckBox.click();
+	    //re-activate to-do
+	    //aCheckBox.click();
+	    
+	    
+	    //add second to-do
+	    
+	    
     //click complete
 //    WebElement checkBox = driver.findElement(By.xpath("id('todo-list')/x:li[1]/x:div/x:input"));
 //    checkBox.click();
@@ -84,9 +98,9 @@ public class JavaSample {
 //    aCheckBox.click();
     										//input[@type="checkbox" and @ng-model="todo.completed"]
 
-    //second new to-do
-    WebElement secondNewTodo = driver.findElement(By.id("new-todo"));
-    secondNewTodo.sendKeys("second new to-do");
+//    //second new to-do
+//    WebElement secondNewTodo = driver.findElement(By.id("new-todo"));
+//    secondNewTodo.sendKeys("second new to-do");
     
     //driver.findElement(By.cssSelector("label.ng-binding")).click();
     //edit to-do
@@ -104,7 +118,7 @@ public class JavaSample {
     
     
     //remove to-do
-    driver.findElement(By.xpath("id('todo-list')/x:li[1]/x:div/x:button")).click();
+//    driver.findElement(By.xpath("id('todo-list')/x:li[1]/x:div/x:button")).click();
 
     
 //    
@@ -125,34 +139,6 @@ public class JavaSample {
     System.out.println(driver.getTitle());
     driver.quit();
 
-  }
-  
-  public void test() throws MalformedURLException{
-	  
-	  	DesiredCapabilities caps = new DesiredCapabilities();
-	    caps.setCapability("browserName", "IE");
-	    caps.setCapability("version", "11");
-	    caps.setCapability("platform", "WIN10");
-	    caps.setCapability("name", "My First Test");
-
-	    WebDriver driver = new RemoteWebDriver(new URL(URL), caps);
-	    //driver.get("http://www.google.com/ncr");
-	    //WebElement element = driver.findElement(By.name("q"));
-	    String baseUrl = "http://todomvc.com/";
-	    driver.get(baseUrl + "examples/angularjs/#/");
-	    driver.findElement(By.id("new-todo")).clear();
-	    driver.findElement(By.id("new-todo")).sendKeys("to-do");
-	    driver.findElement(By.cssSelector("label.ng-binding")).click();
-	    driver.findElement(By.xpath("//ul[@id='todo-list']/li/form/input")).clear();
-	    driver.findElement(By.xpath("//ul[@id='todo-list']/li/form/input")).sendKeys("to-do1");
-	    driver.findElement(By.xpath("(//input[@type='checkbox'])[2]")).click();
-	    driver.findElement(By.xpath("(//input[@type='checkbox'])[2]")).click();
-	    driver.findElement(By.id("new-todo")).clear();
-	    driver.findElement(By.id("new-todo")).sendKeys("to-do2");
-	    driver.findElement(By.id("toggle-all")).click();
-	    driver.findElement(By.linkText("Completed")).click();
-	    driver.findElement(By.cssSelector("button.destroy")).click();
-	    driver.findElement(By.id("clear-completed")).click();
   }
   
 }
