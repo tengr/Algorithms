@@ -48,6 +48,7 @@ public class TestBase {
   	    actions.moveToElement(existingTodo);
   	    actions.doubleClick(existingTodo).perform();
   	    newTodo.sendKeys("edited new to-do");
+  	    Thread.sleep(5000);
   	    
   	    
 //  	    //complete exisiting to-do

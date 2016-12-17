@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="3" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="My Test Suite" duration-ms="0" started-at="2016-10-11T08:34:30Z" finished-at="2016-10-11T08:34:30Z">
+  <suite name="My Test Suite" duration-ms="0" started-at="2016-10-12T15:24:18Z" finished-at="2016-10-12T15:24:18Z">
     <groups>
     </groups>
   </suite> <!-- My Test Suite -->
-  <suite name="Parallel test runs" duration-ms="22449" started-at="2016-10-11T08:34:07Z" finished-at="2016-10-11T08:34:29Z">
+  <suite name="Parallel test runs" duration-ms="28311" started-at="2016-10-12T15:23:49Z" finished-at="2016-10-12T15:24:18Z">
     <groups>
     </groups>
-    <test name="IE" duration-ms="9633" started-at="2016-10-11T08:34:07Z" finished-at="2016-10-11T08:34:17Z">
+    <test name="IE" duration-ms="20692" started-at="2016-10-12T15:23:49Z" finished-at="2016-10-12T15:24:10Z">
       <class name="tengr.tests.IETest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:tengr.tests.IETest@61832929]" name="setUp" is-config="true" duration-ms="8125" started-at="2016-10-11T16:34:07Z" finished-at="2016-10-11T16:34:15Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tengr.tests.IETest@61832929]" name="setUp" is-config="true" duration-ms="18296" started-at="2016-10-12T23:23:49Z" finished-at="2016-10-12T23:24:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="testJavaWebDriver()[pri:0, instance:tengr.tests.IETest@61832929]" name="testJavaWebDriver" duration-ms="15" started-at="2016-10-11T16:34:15Z" finished-at="2016-10-11T16:34:15Z">
+        <test-method status="FAIL" signature="testJavaWebDriver()[pri:0, instance:tengr.tests.IETest@61832929]" name="testJavaWebDriver" duration-ms="5" started-at="2016-10-12T23:24:08Z" finished-at="2016-10-12T23:24:08Z">
           <exception class="java.lang.ClassCastException">
             <message>
               <![CDATA[java.lang.ThreadLocal cannot be cast to org.openqa.selenium.WebElement]]>
@@ -49,19 +49,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testJavaWebDriver -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:tengr.tests.IETest@61832929]" name="closeBrowser" is-config="true" duration-ms="1475" started-at="2016-10-11T16:34:15Z" finished-at="2016-10-11T16:34:17Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:tengr.tests.IETest@61832929]" name="closeBrowser" is-config="true" duration-ms="2369" started-at="2016-10-12T23:24:08Z" finished-at="2016-10-12T23:24:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- tengr.tests.IETest -->
     </test> <!-- IE -->
-    <test name="Chrome" duration-ms="21209" started-at="2016-10-11T08:34:07Z" finished-at="2016-10-11T08:34:28Z">
+    <test name="Chrome" duration-ms="24139" started-at="2016-10-12T15:23:49Z" finished-at="2016-10-12T15:24:13Z">
       <class name="tengr.tests.ChromeTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:tengr.tests.ChromeTest@14acaea5]" name="setUp" is-config="true" duration-ms="20095" started-at="2016-10-11T16:34:07Z" finished-at="2016-10-11T16:34:27Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tengr.tests.ChromeTest@14acaea5]" name="setUp" is-config="true" duration-ms="22278" started-at="2016-10-12T23:23:49Z" finished-at="2016-10-12T23:24:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="testJavaWebDriver()[pri:0, instance:tengr.tests.ChromeTest@14acaea5]" name="testJavaWebDriver" duration-ms="1" started-at="2016-10-11T16:34:27Z" finished-at="2016-10-11T16:34:27Z">
+        <test-method status="FAIL" signature="testJavaWebDriver()[pri:0, instance:tengr.tests.ChromeTest@14acaea5]" name="testJavaWebDriver" duration-ms="2" started-at="2016-10-12T23:24:12Z" finished-at="2016-10-12T23:24:12Z">
           <exception class="java.lang.ClassCastException">
             <message>
               <![CDATA[java.lang.ThreadLocal cannot be cast to org.openqa.selenium.WebElement]]>
@@ -95,19 +95,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testJavaWebDriver -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:tengr.tests.ChromeTest@14acaea5]" name="closeBrowser" is-config="true" duration-ms="1098" started-at="2016-10-11T16:34:27Z" finished-at="2016-10-11T16:34:28Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:tengr.tests.ChromeTest@14acaea5]" name="closeBrowser" is-config="true" duration-ms="1841" started-at="2016-10-12T23:24:12Z" finished-at="2016-10-12T23:24:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- tengr.tests.ChromeTest -->
     </test> <!-- Chrome -->
-    <test name="Firefox" duration-ms="22449" started-at="2016-10-11T08:34:07Z" finished-at="2016-10-11T08:34:29Z">
+    <test name="Firefox" duration-ms="28311" started-at="2016-10-12T15:23:49Z" finished-at="2016-10-12T15:24:18Z">
       <class name="tengr.tests.FirefoxTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:tengr.tests.FirefoxTest@396a51ab]" name="setUp" is-config="true" duration-ms="21134" started-at="2016-10-11T16:34:07Z" finished-at="2016-10-11T16:34:28Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tengr.tests.FirefoxTest@396a51ab]" name="setUp" is-config="true" duration-ms="26248" started-at="2016-10-12T23:23:49Z" finished-at="2016-10-12T23:24:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="testJavaWebDriver()[pri:0, instance:tengr.tests.FirefoxTest@396a51ab]" name="testJavaWebDriver" duration-ms="2" started-at="2016-10-11T16:34:28Z" finished-at="2016-10-11T16:34:28Z">
+        <test-method status="FAIL" signature="testJavaWebDriver()[pri:0, instance:tengr.tests.FirefoxTest@396a51ab]" name="testJavaWebDriver" duration-ms="2" started-at="2016-10-12T23:24:16Z" finished-at="2016-10-12T23:24:16Z">
           <exception class="java.lang.ClassCastException">
             <message>
               <![CDATA[java.lang.ThreadLocal cannot be cast to org.openqa.selenium.WebElement]]>
@@ -141,7 +141,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testJavaWebDriver -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:tengr.tests.FirefoxTest@396a51ab]" name="closeBrowser" is-config="true" duration-ms="1296" started-at="2016-10-11T16:34:28Z" finished-at="2016-10-11T16:34:29Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:tengr.tests.FirefoxTest@396a51ab]" name="closeBrowser" is-config="true" duration-ms="2043" started-at="2016-10-12T23:24:16Z" finished-at="2016-10-12T23:24:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

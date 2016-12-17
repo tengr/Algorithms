@@ -2,9 +2,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.firefox.internal.ProfilesIni;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -36,8 +39,13 @@ public class JavaSample {
 //
 //    element.sendKeys("TestingBot");
 //    element.submit();
+	FirefoxProfile profile = new FirefoxProfile(); 
+	DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+    capabilities.setCapability("firefox_profile", profile);
+    WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),capabilities);
+    //WebDriverWait driverWait = new WebDriverWait(driver,TestConstant.WAIT_ELEMENT_TO_LOAD);
     
-    	WebDriver driver = new RemoteWebDriver(new URL(URL), caps);
+    	//WebDriver driver = new RemoteWebDriver(new URL(URL), caps);
     	//WebDriver driver = new ChromeDriver();
     	String baseUrl = "http://todomvc.com/";
     	driver.get(baseUrl + "examples/angularjs/#/");

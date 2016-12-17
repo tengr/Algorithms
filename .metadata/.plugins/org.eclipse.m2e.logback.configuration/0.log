@@ -966,3 +966,7 @@
 2016-10-03 10:46:57,127 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ruichen/Documents/Algorithms/DonRiver/AustrianLotto/src/main/resources
 2016-10-03 10:46:57,130 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2016-10-03 10:46:57,137 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-11-12 21:53:15,142 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-12 21:53:15,150 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ruichen/Documents/Algorithms/DonRiver/AustrianLotto/src/main/resources
+2016-11-12 21:53:15,152 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-11-12 21:53:15,158 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
