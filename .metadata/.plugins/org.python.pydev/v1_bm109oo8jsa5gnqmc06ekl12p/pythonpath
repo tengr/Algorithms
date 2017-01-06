@@ -1,6 +1,6 @@
 /Library/Python/2.7/site-packages
-/Library/Python/2.7/site-packages/xmpppy-0.5.0rc1-py2.7.egg
 /Library/Python/2.7/site-packages/setuptools-15.2-py2.7.egg
+/Library/Python/2.7/site-packages/xmpppy-0.5.0rc1-py2.7.egg
 /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7
 /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-darwin
 /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac
@@ -9,3 +9,4 @@
 /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-tk
 /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload
 /System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/PyObjC
+/Library/Python/2.7/site-packages/py4j-0.10.4-py2.7.egg

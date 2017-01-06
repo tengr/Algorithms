@@ -33,6 +33,8 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="/Users/ruichen/STG/automated-tests/AutomatedRegression"/>
+			<item value="/Users/ruichen/STG"/>
 			<item value="/Users/ruichen/Documents/Algorithms/DonRiver/AustrianLotto"/>
 			<item value="/Users/ruichen/Documents/Algorithms/DonRiver/tmp/submission/AustrianLotto"/>
 		</list>
