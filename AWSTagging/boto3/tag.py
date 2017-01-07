@@ -30,10 +30,10 @@ for f in files:
     workbooks.append(workbook)
     worksheet = workbook.add_worksheet()
     for idx, field in enumerate(fields):
-        if field != "missing tag":
-            worksheet.write(fields_col[idx]+"1", field)
-        else:
+        if field == "missing tag":
             worksheet.write(fields_col[idx]+"1", field + " : " + f)
+        else:
+            worksheet.write(fields_col[idx]+"1", field)
 
     ws_dict[f] = worksheet
     row_num_dict[f] = 2
