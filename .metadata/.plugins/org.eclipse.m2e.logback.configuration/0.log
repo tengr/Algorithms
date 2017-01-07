@@ -1554,3 +1554,19 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact com.google.co
 2017-01-06 13:37:29,743 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ruichen/STG/TGPlatform_Admin/src/main/resources
 2017-01-06 13:37:29,744 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2017-01-06 13:37:29,744 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ruichen/STG/TGPlatform_Admin/src/test/resources
+2017-01-06 17:55:32,378 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-06 17:55:32,386 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ruichen/STG/automated-tests/AutomatedRegression/src/main/resources
+2017-01-06 17:55:32,389 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-06 17:55:32,389 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ruichen/STG/automated-tests/AutomatedRegression/src/test/resources
+2017-01-06 17:55:33,024 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-06 17:55:33,025 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ruichen/STG/automated-tests/FspSuiteRegression/src/main/resources
+2017-01-06 17:55:33,027 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-06 17:55:33,027 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ruichen/STG/automated-tests/FspSuiteRegression/src/test/resources
+2017-01-06 17:55:33,063 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-06 17:55:33,064 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ruichen/STG/TGPlatform_Admin/src/main/resources
+2017-01-06 17:55:33,065 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-06 17:55:33,066 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ruichen/STG/TGPlatform_Admin/src/test/resources
+2017-01-06 22:59:55,595 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-06 22:59:55,598 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ruichen/Documents/Algorithms/DonRiver/AustrianLotto/src/main/resources
+2017-01-06 22:59:55,604 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-01-06 22:59:55,616 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource

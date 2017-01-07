@@ -1,11 +1,12 @@
 import boto3
+from os.path import expanduser
 #ec2 = boto3.resource('ec2')
 
 import xlsxwriter
 
 import string
 
-output_dir = "/Users/ruichen/STG/"
+output_dir = expanduser("~") + "/STG/"
 
 ec2 = boto3.resource("ec2")
 # filters = [{'Name':'tag:Name', 'Values':['svc-active-directory-management']}]
@@ -65,54 +66,13 @@ for ins in ec2.instances.all():
         continue
     else:
         ins_cnt += 1
-        if ins.id:
-            ids.append(ins.id)
-        env_found = False
-        backup_found = False
-        app_found = False
-        name_found = False
-        avail_found = False
-        owner_found = False
-        name = None
-        for tag in ins.tags:
-            #id, name, instance type, vpc id
-            if tag["Key"] == "Environment": #
-                env_found = True
-            elif tag["Key"] == "Backup": #
-                backup_found = True
-            elif tag["Key"] == "Application": #
-                app_found = True
-            elif tag["Key"] == "Name": #
-                name = tag["Value"]
-                name_found = True
-            elif tag["Key"] == "Availability":
-                avail_found = True
-            elif tag["Key"] == "Owner":
-                #SportsTG
-                owner_found = True
-        if not env_found:
-            filename = "Environment"
-            write(filename, name, ins)
-        if not backup_found:
-            filename = "Backup"
-            write(filename, name, ins)
-        if not app_found:
-            filename = "Application"
-            write(filename, name, ins)
-        if not name_found:
-            name_cnt += 1
-            filename = "Name"
-            print ins.instance_id + "\t" + ins.instance_type + "\t" + str(ins.vpc)
-            write(filename, name, ins)
-        if not avail_found:
-            pass
-        if not owner_found:
-            pass
-          
-            #print "availability not tagged for instance " + ins.id
- 
-            
-#print "avail cnt = " + str(avail_cnt)            
+        files = ["Environment", "Backup", "Application", "Name"]
+        name = next((tag["Value"] for tag in ins.tags if tag["Key"] == "Name"), None)
+        name_cnt += next((1 for tag in ins.tags if tag["Key"] == "Name"), 0)
+        for f in files:
+            if all(tag["Key"] != f for tag in ins.tags):
+                    write(f, name, ins) 
+                              
 print "in total " + str(ins_cnt) + " instance"
 print "in total " + str(missing_cnt) + " missing"
 print name_cnt
