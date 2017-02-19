@@ -1,0 +1,1 @@
+La	La	NN	B-NP	O	place	place	NN	I-NP	O	des	de	VBZ	B-VP	O	cheveux	cheveux	NN	B-NP	O	et	et	FW	I-NP	O	des	des	FW	I-NP	O	poils	poil	NNS	I-NP	O	dans	dan	NNS	I-NP	O	les	le	NNS	I-NP	O	rituels	rituel	NNS	I-NP	O	et	et	VBP	B-VP	O	le	le	NN	B-NP	O	sacré	sacré	NN	I-NP	O	.	.	.	O	O	

@@ -1,0 +1,2 @@
+model_checkpoint_path: "/Users/ruichen/Documents/Algorithms/DL/TensorFlowTutorials/tmp/mnist/checkpoint-1999"
+all_model_checkpoint_paths: "/Users/ruichen/Documents/Algorithms/DL/TensorFlowTutorials/tmp/mnist/checkpoint-1999"
