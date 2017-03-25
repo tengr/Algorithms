@@ -115,6 +115,7 @@
       <service name="Kinesis">https://kinesis.us-west-2.amazonaws.com/</service>
       <service name="Lambda">https://lambda.us-west-2.amazonaws.com/</service>
       <service name="Logs">https://logs.us-west-2.amazonaws.com/</service>    
+      <service name="CodeCommit">https://codecommit.us-west-2.amazonaws.com</service>
 	  <service name="CloudWatchEvents">https://events.us-west-2.amazonaws.com/</service>	  
       <service name="KMS">https://kms.us-west-2.amazonaws.com</service>
     </services>
@@ -203,6 +204,7 @@
       <service name="Lambda">https://lambda.eu-west-1.amazonaws.com/</service>    
       <service name="Kinesis">https://kinesis.eu-west-1.amazonaws.com/</service>      
       <service name="Logs">https://logs.eu-west-1.amazonaws.com/</service>        
+      <service name="CodeCommit">https://codecommit.eu-west-1.amazonaws.com</service>
 	  <service name="CloudWatchEvents">https://events.eu-west-1.amazonaws.com/</service>	  
       <service name="KMS">https://kms.eu-west-1.amazonaws.com</service>
     </services>

@@ -5,6 +5,8 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/Users/ruichen/Documents/Algorithms"/>
+			<item value="/Users/ruichen/Documents/Algorithms/DL"/>
 			<item value="/Users/ruichen/STG/TGPlatform_Admin"/>
 			<item value="/Users/ruichen/STG/automated-tests/FspSuiteRegression"/>
 			<item value="/Users/ruichen/STG/automated-tests/AutomatedRegression"/>
