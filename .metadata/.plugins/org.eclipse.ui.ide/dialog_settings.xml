@@ -5,8 +5,11 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+<<<<<<< HEAD
 			<item value="/Users/ruichen/Documents/Algorithms"/>
 			<item value="/Users/ruichen/Documents/Algorithms/DL"/>
+=======
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 			<item value="/Users/ruichen/STG/TGPlatform_Admin"/>
 			<item value="/Users/ruichen/STG/automated-tests/FspSuiteRegression"/>
 			<item value="/Users/ruichen/STG/automated-tests/AutomatedRegression"/>

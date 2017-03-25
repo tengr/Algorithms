@@ -897,7 +897,10 @@ Netscape.Text|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/pytho
 Netscape.WorldWideWeb_suite|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac/lib-scriptpackages/Netscape/WorldWideWeb_suite.py
 Netscape.__init__|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac/lib-scriptpackages/Netscape/__init__.py
 OSATerminology|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload/OSATerminology.so
+<<<<<<< HEAD
 OleFileIO_PL|/Library/Python/2.7/site-packages/OleFileIO_PL.py
+=======
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 OpenDirectory.__init__|/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/PyObjC/OpenDirectory/__init__.py
 OpenDirectory._metadata|/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/PyObjC/OpenDirectory/_metadata.py
 OpenGL
@@ -912,6 +915,7 @@ OpenSSL.test.test_ssl|/System/Library/Frameworks/Python.framework/Versions/2.7/E
 OpenSSL.test.util|/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/OpenSSL/test/util.py
 OpenSSL.tsafe|/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/OpenSSL/tsafe.py
 OpenSSL.version|/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/OpenSSL/version.py
+<<<<<<< HEAD
 PIL.BdfFontFile|/Library/Python/2.7/site-packages/PIL/BdfFontFile.py
 PIL.BmpImagePlugin|/Library/Python/2.7/site-packages/PIL/BmpImagePlugin.py
 PIL.BufrStubImagePlugin|/Library/Python/2.7/site-packages/PIL/BufrStubImagePlugin.py
@@ -1008,6 +1012,8 @@ PIL._tkinter_finder|/Library/Python/2.7/site-packages/PIL/_tkinter_finder.py
 PIL._util|/Library/Python/2.7/site-packages/PIL/_util.py
 PIL._webp|/Library/Python/2.7/site-packages/PIL/_webp.so
 PIL.features|/Library/Python/2.7/site-packages/PIL/features.py
+=======
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 PixMapWrapper|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac/PixMapWrapper.py
 PreferencePanes.__init__|/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/PyObjC/PreferencePanes/__init__.py
 PreferencePanes._metadata|/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/PyObjC/PreferencePanes/_metadata.py
@@ -1383,7 +1389,10 @@ awscli.testutils|/Library/Python/2.7/site-packages/awscli/testutils.py
 awscli.text|/Library/Python/2.7/site-packages/awscli/text.py
 awscli.topictags|/Library/Python/2.7/site-packages/awscli/topictags.py
 awscli.utils|/Library/Python/2.7/site-packages/awscli/utils.py
+<<<<<<< HEAD
 backports_abc|/Library/Python/2.7/site-packages/backports_abc.py
+=======
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 base64|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/base64.py
 bdb|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/bdb.py
 bdist_mpkg.__init__|/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/bdist_mpkg/__init__.py
@@ -1940,6 +1949,7 @@ botocore.vendored.requests.structures|/Library/Python/2.7/site-packages/botocore
 botocore.vendored.requests.utils|/Library/Python/2.7/site-packages/botocore/vendored/requests/utils.py
 botocore.vendored.six|/Library/Python/2.7/site-packages/botocore/vendored/six.py
 botocore.waiter|/Library/Python/2.7/site-packages/botocore/waiter.py
+<<<<<<< HEAD
 bs4.1631353|/Library/Python/2.7/site-packages/bs4/1631353.py
 bs4.__init__|/Library/Python/2.7/site-packages/bs4/__init__.py
 bs4.builder.__init__|/Library/Python/2.7/site-packages/bs4/builder/__init__.py
@@ -1958,6 +1968,8 @@ bs4.tests.test_htmlparser|/Library/Python/2.7/site-packages/bs4/tests/test_htmlp
 bs4.tests.test_lxml|/Library/Python/2.7/site-packages/bs4/tests/test_lxml.py
 bs4.tests.test_soup|/Library/Python/2.7/site-packages/bs4/tests/test_soup.py
 bs4.tests.test_tree|/Library/Python/2.7/site-packages/bs4/tests/test_tree.py
+=======
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 bsddb.__init__|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/bsddb/__init__.py
 bsddb.db|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/bsddb/db.py
 bsddb.dbobj|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/bsddb/dbobj.py
@@ -1999,6 +2011,7 @@ cPickle|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/l
 cProfile|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/cProfile.py
 cStringIO|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload/cStringIO.so
 calendar|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/calendar.py
+<<<<<<< HEAD
 cassandra.__init__|/Library/Python/2.7/site-packages/cassandra/__init__.py
 cassandra.auth|/Library/Python/2.7/site-packages/cassandra/auth.py
 cassandra.buffer|/Library/Python/2.7/site-packages/cassandra/buffer.pxd
@@ -2050,10 +2063,13 @@ cassandra.util|/Library/Python/2.7/site-packages/cassandra/util.py
 certifi.__init__|/Library/Python/2.7/site-packages/certifi/__init__.py
 certifi.__main__|/Library/Python/2.7/site-packages/certifi/__main__.py
 certifi.core|/Library/Python/2.7/site-packages/certifi/core.py
+=======
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 cfmfile|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac/cfmfile.py
 cgi|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/cgi.py
 cgitb|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/cgitb.py
 chunk|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/chunk.py
+<<<<<<< HEAD
 click.__init__|/Library/Python/2.7/site-packages/click/__init__.py
 click._bashcomplete|/Library/Python/2.7/site-packages/click/_bashcomplete.py
 click._compat|/Library/Python/2.7/site-packages/click/_compat.py
@@ -2071,6 +2087,8 @@ click.termui|/Library/Python/2.7/site-packages/click/termui.py
 click.testing|/Library/Python/2.7/site-packages/click/testing.py
 click.types|/Library/Python/2.7/site-packages/click/types.py
 click.utils|/Library/Python/2.7/site-packages/click/utils.py
+=======
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 cmath|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload/cmath.so
 cmd|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/cmd.py
 code|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/code.py
@@ -2108,6 +2126,7 @@ contextlib|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.
 cookielib|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/cookielib.py
 copy|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/copy.py
 copy_reg|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/copy_reg.py
+<<<<<<< HEAD
 cql.__init__|/Library/Python/2.7/site-packages/cql/__init__.py
 cql.apivalues|/Library/Python/2.7/site-packages/cql/apivalues.py
 cql.cassandra.Cassandra|/Library/Python/2.7/site-packages/cql/cassandra/Cassandra.py
@@ -2124,6 +2143,8 @@ cql.marshal|/Library/Python/2.7/site-packages/cql/marshal.py
 cql.native|/Library/Python/2.7/site-packages/cql/native.py
 cql.query|/Library/Python/2.7/site-packages/cql/query.py
 cql.thrifteries|/Library/Python/2.7/site-packages/cql/thrifteries.py
+=======
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 crypt|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload/crypt.so
 csv|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/csv.py
 ctypes.__init__|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ctypes/__init__.py
@@ -2582,12 +2603,15 @@ ensurepip.__init__|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/
 ensurepip.__main__|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ensurepip/__main__.py
 ensurepip._uninstall|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ensurepip/_uninstall.py
 errno
+<<<<<<< HEAD
 et_xmlfile.__init__|/Library/Python/2.7/site-packages/et_xmlfile/__init__.py
 et_xmlfile.tests.__init__|/Library/Python/2.7/site-packages/et_xmlfile/tests/__init__.py
 et_xmlfile.tests.common_imports|/Library/Python/2.7/site-packages/et_xmlfile/tests/common_imports.py
 et_xmlfile.tests.helper|/Library/Python/2.7/site-packages/et_xmlfile/tests/helper.py
 et_xmlfile.tests.test_incremental_xmlfile|/Library/Python/2.7/site-packages/et_xmlfile/tests/test_incremental_xmlfile.py
 et_xmlfile.xmlfile|/Library/Python/2.7/site-packages/et_xmlfile/xmlfile.py
+=======
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 examples.__init__|/Library/Python/2.7/site-packages/examples/__init__.py
 examples.oauth|/Library/Python/2.7/site-packages/examples/oauth.py
 examples.streaming|/Library/Python/2.7/site-packages/examples/streaming.py
@@ -2648,6 +2672,7 @@ fcntl|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib
 filecmp|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/filecmp.py
 fileinput|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/fileinput.py
 findertools|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac/findertools.py
+<<<<<<< HEAD
 flask.__init__|/Library/Python/2.7/site-packages/flask/__init__.py
 flask.__main__|/Library/Python/2.7/site-packages/flask/__main__.py
 flask._compat|/Library/Python/2.7/site-packages/flask/_compat.py
@@ -2669,6 +2694,8 @@ flask.templating|/Library/Python/2.7/site-packages/flask/templating.py
 flask.testing|/Library/Python/2.7/site-packages/flask/testing.py
 flask.views|/Library/Python/2.7/site-packages/flask/views.py
 flask.wrappers|/Library/Python/2.7/site-packages/flask/wrappers.py
+=======
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 fnmatch|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/fnmatch.py
 formatter|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/formatter.py
 fpformat|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/fpformat.py
@@ -2680,7 +2707,10 @@ functools|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7
 future_builtins|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload/future_builtins.so
 gc
 genericpath|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/genericpath.py
+<<<<<<< HEAD
 geniatagger|/Users/ruichen/DL/bio_de_mt/geniatagger-python/geniatagger.py
+=======
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 gensim.__init__|/Library/Python/2.7/site-packages/gensim/__init__.py
 gensim.corpora.__init__|/Library/Python/2.7/site-packages/gensim/corpora/__init__.py
 gensim.corpora.bleicorpus|/Library/Python/2.7/site-packages/gensim/corpora/bleicorpus.py
@@ -2871,6 +2901,7 @@ imghdr|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/im
 imp
 importlib.__init__|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/importlib/__init__.py
 imputil|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/imputil.py
+<<<<<<< HEAD
 indicoio.__init__|/Library/Python/2.7/site-packages/indicoio/__init__.py
 indicoio.config|/Library/Python/2.7/site-packages/indicoio/config.py
 indicoio.custom.__init__|/Library/Python/2.7/site-packages/indicoio/custom/__init__.py
@@ -2943,6 +2974,11 @@ jinja2.sandbox|/Library/Python/2.7/site-packages/jinja2/sandbox.py
 jinja2.tests|/Library/Python/2.7/site-packages/jinja2/tests.py
 jinja2.utils|/Library/Python/2.7/site-packages/jinja2/utils.py
 jinja2.visitor|/Library/Python/2.7/site-packages/jinja2/visitor.py
+=======
+inspect|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/inspect.py
+io|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/io.py
+itertools|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload/itertools.so
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 jmespath.__init__|/Library/Python/2.7/site-packages/jmespath/__init__.py
 jmespath.ast|/Library/Python/2.7/site-packages/jmespath/ast.py
 jmespath.compat|/Library/Python/2.7/site-packages/jmespath/compat.py
@@ -3035,6 +3071,7 @@ keras.utils.visualize_util|/Library/Python/2.7/site-packages/keras/utils/visuali
 keras.wrappers.__init__|/Library/Python/2.7/site-packages/keras/wrappers/__init__.py
 keras.wrappers.scikit_learn|/Library/Python/2.7/site-packages/keras/wrappers/scikit_learn.py
 keyword|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/keyword.py
+<<<<<<< HEAD
 langdetect.__init__|/Library/Python/2.7/site-packages/langdetect/__init__.py
 langdetect.detector|/Library/Python/2.7/site-packages/langdetect/detector.py
 langdetect.detector_factory|/Library/Python/2.7/site-packages/langdetect/detector_factory.py
@@ -3048,6 +3085,8 @@ langdetect.utils.lang_profile|/Library/Python/2.7/site-packages/langdetect/utils
 langdetect.utils.messages|/Library/Python/2.7/site-packages/langdetect/utils/messages.py
 langdetect.utils.ngram|/Library/Python/2.7/site-packages/langdetect/utils/ngram.py
 langdetect.utils.unicode_block|/Library/Python/2.7/site-packages/langdetect/utils/unicode_block.py
+=======
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 lib2to3.__init__|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib2to3/__init__.py
 lib2to3.__main__|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib2to3/__main__.py
 lib2to3.btm_matcher|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib2to3/btm_matcher.py
@@ -3136,6 +3175,7 @@ locale|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lo
 logging.__init__|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/logging/__init__.py
 logging.config|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/logging/config.py
 logging.handlers|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/logging/handlers.py
+<<<<<<< HEAD
 lxml.ElementInclude|/Library/Python/2.7/site-packages/lxml/ElementInclude.py
 lxml.__init__|/Library/Python/2.7/site-packages/lxml/__init__.py
 lxml._elementpath|/Library/Python/2.7/site-packages/lxml/_elementpath.py
@@ -3177,6 +3217,8 @@ lxml.objectify|/Library/Python/2.7/site-packages/lxml/objectify.so
 lxml.pyclasslookup|/Library/Python/2.7/site-packages/lxml/pyclasslookup.py
 lxml.sax|/Library/Python/2.7/site-packages/lxml/sax.py
 lxml.usedoctest|/Library/Python/2.7/site-packages/lxml/usedoctest.py
+=======
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 macerrors|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac/macerrors.py
 macholib.MachO|/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/macholib/MachO.py
 macholib.MachOGraph|/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/macholib/MachOGraph.py
@@ -3202,11 +3244,14 @@ macurl2path|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2
 mailbox|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/mailbox.py
 mailcap|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/mailcap.py
 markupbase|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/markupbase.py
+<<<<<<< HEAD
 markupsafe.__init__|/Library/Python/2.7/site-packages/markupsafe/__init__.py
 markupsafe._compat|/Library/Python/2.7/site-packages/markupsafe/_compat.py
 markupsafe._constants|/Library/Python/2.7/site-packages/markupsafe/_constants.py
 markupsafe._native|/Library/Python/2.7/site-packages/markupsafe/_native.py
 markupsafe._speedups|/Library/Python/2.7/site-packages/markupsafe/_speedups.so
+=======
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 marshal
 math|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload/math.so
 matplotlib.__init__|/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/matplotlib/__init__.py
@@ -4030,6 +4075,7 @@ objc._protocols|/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/
 objc._pycoder|/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/PyObjC/objc/_pycoder.py
 objc._pythonify|/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/PyObjC/objc/_pythonify.py
 objc._setup|/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/PyObjC/objc/_setup.py
+<<<<<<< HEAD
 olefile.__init__|/Library/Python/2.7/site-packages/olefile/__init__.py
 olefile.olefile|/Library/Python/2.7/site-packages/olefile/olefile.py
 opcode|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/opcode.py
@@ -4203,6 +4249,9 @@ openpyxl.xml.__init__|/Library/Python/2.7/site-packages/openpyxl/xml/__init__.py
 openpyxl.xml.constants|/Library/Python/2.7/site-packages/openpyxl/xml/constants.py
 openpyxl.xml.functions|/Library/Python/2.7/site-packages/openpyxl/xml/functions.py
 openpyxl.xml.namespace|/Library/Python/2.7/site-packages/openpyxl/xml/namespace.py
+=======
+opcode|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/opcode.py
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 operator|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload/operator.so
 optparse|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/optparse.py
 os|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/os.py
@@ -5097,10 +5146,14 @@ pydoc_data.topics|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/p
 pyexpat|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload/pyexpat.so
 pylab|/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/pylab.py
 pyparsing|/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/pyparsing.py
+<<<<<<< HEAD
 pysolr|/Library/Python/2.7/site-packages/pysolr.py
 pytest
 pytrends.__init__|/Library/Python/2.7/site-packages/pytrends/__init__.py
 pytrends.request|/Library/Python/2.7/site-packages/pytrends/request.py
+=======
+pytest
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 pytz.__init__|/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/pytz/__init__.py
 pytz.exceptions|/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/pytz/exceptions.py
 pytz.lazy|/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/pytz/lazy.py
@@ -5601,6 +5654,7 @@ scipy.weave.swigptr2|/System/Library/Frameworks/Python.framework/Versions/2.7/Ex
 scipy.weave.vtk_spec|/Library/Python/2.7/site-packages/scipy/weave/vtk_spec.py
 scipy.weave.weave_version|/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/scipy/weave/weave_version.py
 select|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload/select.so
+<<<<<<< HEAD
 selenium.__init__|/Library/Python/2.7/site-packages/selenium/__init__.py
 selenium.common.__init__|/Library/Python/2.7/site-packages/selenium/common/__init__.py
 selenium.common.exceptions|/Library/Python/2.7/site-packages/selenium/common/exceptions.py
@@ -5670,6 +5724,8 @@ selenium.webdriver.support.expected_conditions|/Library/Python/2.7/site-packages
 selenium.webdriver.support.select|/Library/Python/2.7/site-packages/selenium/webdriver/support/select.py
 selenium.webdriver.support.ui|/Library/Python/2.7/site-packages/selenium/webdriver/support/ui.py
 selenium.webdriver.support.wait|/Library/Python/2.7/site-packages/selenium/webdriver/support/wait.py
+=======
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 semantria.__init__|/Library/Python/2.7/site-packages/semantria/__init__.py
 semantria.authrequest|/Library/Python/2.7/site-packages/semantria/authrequest.py
 semantria.error|/Library/Python/2.7/site-packages/semantria/error.py
@@ -5677,7 +5733,10 @@ semantria.jsonserializer|/Library/Python/2.7/site-packages/semantria/jsonseriali
 semantria.session|/Library/Python/2.7/site-packages/semantria/session.py
 semantria.version|/Library/Python/2.7/site-packages/semantria/version.py
 sets|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/sets.py
+<<<<<<< HEAD
 setup|/Users/ruichen/DL/bio_de_mt/geniatagger-python/setup.py
+=======
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 setuptools.__init__|/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/setuptools/__init__.py
 setuptools.archive_util|/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/setuptools/archive_util.py
 setuptools.command.__init__|/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/setuptools/command/__init__.py
@@ -5748,8 +5807,11 @@ shelve|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/sh
 shlex|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shlex.py
 shutil|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py
 signal
+<<<<<<< HEAD
 singledispatch|/Library/Python/2.7/site-packages/singledispatch.py
 singledispatch_helpers|/Library/Python/2.7/site-packages/singledispatch_helpers.py
+=======
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 site|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site.py
 six|/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/six.py
 sklearn.__check_build.__init__|/Library/Python/2.7/site-packages/sklearn/__check_build/__init__.py
@@ -7581,7 +7643,10 @@ test.tracedmodules.testmod|/System/Library/Frameworks/Python.framework/Versions/
 test.warning_tests|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/test/warning_tests.py
 test.win_console_handler|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/test/win_console_handler.py
 test.xmltests|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/test/xmltests.py
+<<<<<<< HEAD
 tests.__init__|/Library/Python/2.7/site-packages/tests/__init__.py
+=======
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 textblob.__init__|/Library/Python/2.7/site-packages/textblob/__init__.py
 textblob._text|/Library/Python/2.7/site-packages/textblob/_text.py
 textblob.base|/Library/Python/2.7/site-packages/textblob/base.py
@@ -7991,6 +8056,7 @@ theano.version|/Library/Python/2.7/site-packages/theano/version.py
 this|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/this.py
 thread
 threading|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/threading.py
+<<<<<<< HEAD
 thrift.TMultiplexedProcessor|/Library/Python/2.7/site-packages/thrift/TMultiplexedProcessor.py
 thrift.TSCons|/Library/Python/2.7/site-packages/thrift/TSCons.py
 thrift.TSerialization|/Library/Python/2.7/site-packages/thrift/TSerialization.py
@@ -8020,6 +8086,8 @@ thrift.transport.TTwisted|/Library/Python/2.7/site-packages/thrift/transport/TTw
 thrift.transport.TZlibTransport|/Library/Python/2.7/site-packages/thrift/transport/TZlibTransport.py
 thrift.transport.__init__|/Library/Python/2.7/site-packages/thrift/transport/__init__.py
 thrift.transport.sslcompat|/Library/Python/2.7/site-packages/thrift/transport/sslcompat.py
+=======
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 time|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload/time.so
 timeit|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/timeit.py
 tkColorChooser|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-tk/tkColorChooser.py
@@ -8031,6 +8099,7 @@ tkSimpleDialog|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/pyth
 toaiff|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/toaiff.py
 token|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/token.py
 tokenize|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/tokenize.py
+<<<<<<< HEAD
 tornado.__init__|/Library/Python/2.7/site-packages/tornado/__init__.py
 tornado._locale_data|/Library/Python/2.7/site-packages/tornado/_locale_data.py
 tornado.auth|/Library/Python/2.7/site-packages/tornado/auth.py
@@ -8112,6 +8181,8 @@ tornado.util|/Library/Python/2.7/site-packages/tornado/util.py
 tornado.web|/Library/Python/2.7/site-packages/tornado/web.py
 tornado.websocket|/Library/Python/2.7/site-packages/tornado/websocket.py
 tornado.wsgi|/Library/Python/2.7/site-packages/tornado/wsgi.py
+=======
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 trace|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/trace.py
 traceback|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/traceback.py
 ttk|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-tk/ttk.py
@@ -8128,6 +8199,7 @@ tweepy.models|/Library/Python/2.7/site-packages/tweepy/models.py
 tweepy.parsers|/Library/Python/2.7/site-packages/tweepy/parsers.py
 tweepy.streaming|/Library/Python/2.7/site-packages/tweepy/streaming.py
 tweepy.utils|/Library/Python/2.7/site-packages/tweepy/utils.py
+<<<<<<< HEAD
 twython.__init__|/Library/Python/2.7/site-packages/twython/__init__.py
 twython.advisory|/Library/Python/2.7/site-packages/twython/advisory.py
 twython.api|/Library/Python/2.7/site-packages/twython/api.py
@@ -8138,6 +8210,8 @@ twython.helpers|/Library/Python/2.7/site-packages/twython/helpers.py
 twython.streaming.__init__|/Library/Python/2.7/site-packages/twython/streaming/__init__.py
 twython.streaming.api|/Library/Python/2.7/site-packages/twython/streaming/api.py
 twython.streaming.types|/Library/Python/2.7/site-packages/twython/streaming/types.py
+=======
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 types|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/types.py
 unicodedata|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload/unicodedata.so
 unittest.__init__|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/__init__.py
@@ -8176,6 +8250,7 @@ vboxapi.__init__|/Library/Python/2.7/site-packages/vboxapi/__init__.py
 videoreader|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac/videoreader.py
 virtualenv|/Library/Python/2.7/site-packages/virtualenv.py
 virtualenv_support.__init__|/Library/Python/2.7/site-packages/virtualenv_support/__init__.py
+<<<<<<< HEAD
 visdom.__init__|/Library/Python/2.7/site-packages/visdom/__init__.py
 visdom.server|/Library/Python/2.7/site-packages/visdom/server.py
 warnings|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/warnings.py
@@ -8247,6 +8322,12 @@ werkzeug.useragents|/Library/Python/2.7/site-packages/werkzeug/useragents.py
 werkzeug.utils|/Library/Python/2.7/site-packages/werkzeug/utils.py
 werkzeug.wrappers|/Library/Python/2.7/site-packages/werkzeug/wrappers.py
 werkzeug.wsgi|/Library/Python/2.7/site-packages/werkzeug/wsgi.py
+=======
+warnings|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/warnings.py
+wave|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/wave.py
+weakref|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/weakref.py
+webbrowser|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/webbrowser.py
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 wheel.__init__|/Library/Python/2.7/site-packages/wheel/__init__.py
 wheel.__main__|/Library/Python/2.7/site-packages/wheel/__main__.py
 wheel.archive|/Library/Python/2.7/site-packages/wheel/archive.py
@@ -8289,6 +8370,7 @@ xattr._xattr|/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib
 xattr.constants|/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/xattr/constants.py
 xattr.tool|/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/xattr/tool.py
 xdrlib|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/xdrlib.py
+<<<<<<< HEAD
 xlrd.__init__|/Library/Python/2.7/site-packages/xlrd/__init__.py
 xlrd.biffh|/Library/Python/2.7/site-packages/xlrd/biffh.py
 xlrd.book|/Library/Python/2.7/site-packages/xlrd/book.py
@@ -8301,6 +8383,8 @@ xlrd.sheet|/Library/Python/2.7/site-packages/xlrd/sheet.py
 xlrd.timemachine|/Library/Python/2.7/site-packages/xlrd/timemachine.py
 xlrd.xldate|/Library/Python/2.7/site-packages/xlrd/xldate.py
 xlrd.xlsx|/Library/Python/2.7/site-packages/xlrd/xlsx.py
+=======
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 xlsxwriter.__init__|/Library/Python/2.7/site-packages/xlsxwriter/__init__.py
 xlsxwriter.app|/Library/Python/2.7/site-packages/xlsxwriter/app.py
 xlsxwriter.chart|/Library/Python/2.7/site-packages/xlsxwriter/chart.py
@@ -8394,6 +8478,7 @@ yaml.tokens|/Library/Python/2.7/site-packages/yaml/tokens.py
 zipfile|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/zipfile.py
 zipimport
 zlib|/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload/zlib.so
+<<<<<<< HEAD
 zmq.__init__|/Library/Python/2.7/site-packages/zmq/__init__.py
 zmq.auth.__init__|/Library/Python/2.7/site-packages/zmq/auth/__init__.py
 zmq.auth.base|/Library/Python/2.7/site-packages/zmq/auth/base.py
@@ -8512,6 +8597,8 @@ zmq.utils.sixcerpt|/Library/Python/2.7/site-packages/zmq/utils/sixcerpt.py
 zmq.utils.strtypes|/Library/Python/2.7/site-packages/zmq/utils/strtypes.py
 zmq.utils.win32|/Library/Python/2.7/site-packages/zmq/utils/win32.py
 zmq.utils.z85|/Library/Python/2.7/site-packages/zmq/utils/z85.py
+=======
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 zope.__init__|/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/zope/__init__.py
 zope.interface.__init__|/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/zope/interface/__init__.py
 zope.interface._compat|/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/zope/interface/_compat.py

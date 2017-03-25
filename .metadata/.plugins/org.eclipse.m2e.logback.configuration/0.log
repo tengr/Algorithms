@@ -1570,6 +1570,7 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact com.google.co
 2017-01-06 22:59:55,598 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ruichen/Documents/Algorithms/DonRiver/AustrianLotto/src/main/resources
 2017-01-06 22:59:55,604 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2017-01-06 22:59:55,616 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+<<<<<<< HEAD
 2017-03-25 21:57:39,024 [Worker-4] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.donriver.AustrianLotto:AustrianLotto:1.0-SNAPSHOT @ /Users/ruichen/Documents/Algorithms/DonRiver/AustrianLotto/pom.xml.
 2017-03-25 21:57:39,025 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.donriver.AustrianLotto:AustrianLotto:1.0-SNAPSHOT @ /Users/ruichen/Documents/Algorithms/DonRiver/AustrianLotto/pom.xml.
 2017-03-25 21:57:39,992 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
@@ -1593,3 +1594,5 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact com.google.co
 2017-03-25 21:57:47,876 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ruichen/Documents/Algorithms/one/src/main/resources
 2017-03-25 21:57:47,878 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2017-03-25 21:57:47,878 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/ruichen/Documents/Algorithms/one/src/test/resources
+=======
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2

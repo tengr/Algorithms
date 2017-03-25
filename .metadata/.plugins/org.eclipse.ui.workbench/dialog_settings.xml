@@ -2,11 +2,19 @@
 <section name="Workbench">
 	<section name="WorkbenchPreferenceDialogSettings">
 		<item value="101" key="DIALOG_X_ORIGIN"/>
+<<<<<<< HEAD
 		<item value="0" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="org.eclipse.ui.internal.QuickAccess">
 		<item value="500" key="dialogHeight"/>
 		<item value="800" key="dialogWidth"/>
+=======
+		<item value="30" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.ui.internal.QuickAccess">
+		<item value="675" key="dialogHeight"/>
+		<item value="1200" key="dialogWidth"/>
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 		<list key="textEntries">
 		</list>
 		<list key="orderedElements">
@@ -35,6 +43,9 @@
 			<item value="org.eclipse.m2e"/>
 		</list>
 	</section>
+<<<<<<< HEAD
 	<section name="FileSystemImportWizard">
 	</section>
+=======
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 </section>

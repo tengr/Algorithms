@@ -13,7 +13,10 @@
 	<item value="0" key="CallHierarchyViewPart.call_mode"/>
 	<item value="/Users/ruichen/Downloads/selenium-java-3.0.0-beta4/lib" key="org.eclipse.jdt.ui.lastextjar"/>
 	<item value="3" key="CallHierarchyViewPart.orientation"/>
+<<<<<<< HEAD
 	<item value="/Users/ruichen/Documents/Algorithms/Kickstart2017" key="org.eclipse.jdt.ui.last.external.project"/>
+=======
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 	<list key="SearchScopeActionGroup.working_set">
 	</list>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
@@ -30,6 +33,7 @@
 		<item value="true" key="SearchInJRE"/>
 		<item value="true" key="SearchInSources"/>
 	</section>
+<<<<<<< HEAD
 	<section name="DialogBounds_SuperInterfaceSelectionDialog">
 		<item value="356" key="DIALOG_WIDTH"/>
 		<item value="1|.SF NS Text|11.0|0|COCOA|1|.SFNSText" key="DIALOG_FONT_NAME"/>
@@ -37,6 +41,8 @@
 		<item value="90" key="DIALOG_X_ORIGIN"/>
 		<item value="18" key="DIALOG_Y_ORIGIN"/>
 	</section>
+=======
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item value="2" key="layout"/>
 		<item value="true" key="group_libraries"/>
@@ -80,6 +86,7 @@
 			<item value="54" key="DIALOG_Y_ORIGIN"/>
 		</section>
 	</section>
+<<<<<<< HEAD
 	<section name="DialogBounds_GenerateToStringDialog">
 		<item value="504" key="DIALOG_WIDTH"/>
 		<item value="1|.SF NS Text|11.0|0|COCOA|1|.SFNSText" key="DIALOG_FONT_NAME"/>
@@ -87,12 +94,15 @@
 		<item value="386" key="DIALOG_X_ORIGIN"/>
 		<item value="0" key="DIALOG_Y_ORIGIN"/>
 	</section>
+=======
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 	<section name="RefactoringWizard.preview">
 		<item value="600" key="width"/>
 		<item value="400" key="height"/>
 	</section>
 	<section name="CallHierarchySearchScope">
 	</section>
+<<<<<<< HEAD
 	<section name="SourceActionDialog.methods">
 		<item value="true" key="IgnoreDefault"/>
 		<item value="false" key="SynchronizedModifier"/>
@@ -104,6 +114,8 @@
 		<item value="10" key="LimitValue"/>
 		<item value="false" key="FinalModifier"/>
 	</section>
+=======
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 	<section name="org.eclipse.jdt.internal.ui.preferences.EditTemplateDialog_dialogBounds">
 		<item value="596" key="DIALOG_WIDTH"/>
 		<item value="1|.Helvetica Neue DeskInterface|11.0|0|COCOA|1|.HelveticaNeueDeskInterface-Regular" key="DIALOG_FONT_NAME"/>

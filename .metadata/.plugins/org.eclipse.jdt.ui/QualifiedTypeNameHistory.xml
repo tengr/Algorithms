@@ -19,6 +19,10 @@
 <fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="java.util.TreeMap"/>
+<<<<<<< HEAD
+=======
+<fullyQualifiedTypeName name="java.util.Comparator"/>
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 <fullyQualifiedTypeName name="org.openqa.selenium.remote.DesiredCapabilities"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.remote.RemoteWebDriver"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.firefox.FirefoxDriver"/>
@@ -36,5 +40,8 @@
 <fullyQualifiedTypeName name="java.io.BufferedReader"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<<<<<<< HEAD
 <fullyQualifiedTypeName name="java.util.Comparator"/>
+=======
+>>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 </qualifiedTypeNameHistroy>
