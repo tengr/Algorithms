@@ -115,10 +115,7 @@
       <service name="Kinesis">https://kinesis.us-west-2.amazonaws.com/</service>
       <service name="Lambda">https://lambda.us-west-2.amazonaws.com/</service>
       <service name="Logs">https://logs.us-west-2.amazonaws.com/</service>    
-<<<<<<< HEAD
       <service name="CodeCommit">https://codecommit.us-west-2.amazonaws.com</service>
-=======
->>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 	  <service name="CloudWatchEvents">https://events.us-west-2.amazonaws.com/</service>	  
       <service name="KMS">https://kms.us-west-2.amazonaws.com</service>
     </services>
@@ -207,10 +204,7 @@
       <service name="Lambda">https://lambda.eu-west-1.amazonaws.com/</service>    
       <service name="Kinesis">https://kinesis.eu-west-1.amazonaws.com/</service>      
       <service name="Logs">https://logs.eu-west-1.amazonaws.com/</service>        
-<<<<<<< HEAD
       <service name="CodeCommit">https://codecommit.eu-west-1.amazonaws.com</service>
-=======
->>>>>>> d85cd7cd74b90819308181717ffd5cdd3a8150a2
 	  <service name="CloudWatchEvents">https://events.eu-west-1.amazonaws.com/</service>	  
       <service name="KMS">https://kms.eu-west-1.amazonaws.com</service>
     </services>
@@ -293,6 +287,7 @@
       <service name="CloudWatch">https://monitoring.ap-south-1.amazonaws.com/</service>
       <service name="DynamoDB">https://dynamodb.ap-south-1.amazonaws.com/</service>
       <service name="DynamoDBStream">https://streams.dynamodb.ap-south-1.amazonaws.com/</service>
+      <service name="Lambda">https://lambda.ap-south-1.amazonaws.com/</service>
       <service name="Kinesis">https://kinesis.ap-south-1.amazonaws.com/</service>
       <service name="Logs">https://logs.ap-south-1.amazonaws.com/</service>     
 	  <service name="CloudWatchEvents">https://events.ap-south-1.amazonaws.com/</service>	  
@@ -470,8 +465,9 @@
       <service name="CloudFormation">https://cloudformation.cn-north-1.amazonaws.com.cn/</service>
       <service name="DynamoDB">https://dynamodb.cn-north-1.amazonaws.com.cn/</service>
       <service name="DynamoDBStream">https://streams.dynamodb.cn-north-1.amazonaws.com/</service>
+      <service name="CodeDeploy">https://codedeploy.cn-north-1.amazonaws.com/</service>
       <service name="Logs">https://logs.cn-north-1.amazonaws.com.cn/</service>        
-	  <service name="CloudWatchEvents">https://events.cn-north-1.amazonaws.com.cn/</service>	  
+	  <service name="CloudWatchEvents">https://events.cn-north-1.amazonaws.com.cn/</service>	
     </services>
   </region>
 
