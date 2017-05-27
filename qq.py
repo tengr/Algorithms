@@ -1,5 +1,5 @@
 #! /usr/env/python
-import numpy as np
+from itertools import permutations, combinations, combinations_with_replacement
 patterns = [
     #无间隔
     ('AAAAAAAA', False),
@@ -122,43 +122,86 @@ patterns = [
     ('XXABCDYY', True),
     ]
 
-def check(pattern, order, num):
-    hs = {}
-    num_set = set()
+def set_stars(star_list, arrs, result_set):
+    if len(star_list) == 0:
+        for arr in arrs:
+            result_set.add(''.join(arr))
+    for combination in combinations_with_replacement(num_str, len(star_list)):
+        for permutation in permutations(''.join(combination)):
+            for arr in arrs:
+                new_arr = [ch for ch in arr]
+                for idx, ch in enumerate(permutation):
+                    new_arr[star_list[idx]] = ch
+                result_set.add(''.join(new_arr))
+
+def set_chars(char_map):
+    res_list = []
+    for permutation in permutations(num_str, len(char_map)):
+        arr = [''] * 8
+        for ch, key in zip(permutation, char_map):
+            idx_list = char_map[key]
+            for idx in idx_list:
+                arr[idx] = ch
+        res_list.append(arr)
+    return res_list
+
+def sequence_gen(char_map, pattern):
+    res_list = []
+    arr = [ch for ch in pattern]
+    offset1 = 0
+    seq1 = set()
+    while chr(ord('A') + offset1) in char_map:
+        seq1.add(chr(ord('A') + offset1))
+        offset1 += 1
+    offset1 = 10 - offset1
+    while offset1 >= 0:
+        arr1 = [str(offset1 + ord(ch) - ord('A')) if ch in seq1 else ch for ch in arr]
+        if 'X' in char_map:
+            offset2 = 0
+            seq2 = set()
+            while chr(ord('X') + offset2) in char_map:
+                seq2.add(chr(ord('X') + offset2))
+                offset2 += 1
+            offset2 = 10 - offset2
+            while offset2 >= 0:
+                arr2 = [str(offset2 + ord(ch) - ord('X')) if ch in seq2 else ch for ch in arr1]
+                res_list.append(arr2)
+                offset2 -= 1
+        else:
+            res_list.append(arr1)
+        offset1 -= 1
+    return res_list
+
+def init(pattern):
+    char_map = {}
+    star_list = []
     for idx, ch in enumerate(pattern):
         if ch == '*':
-            continue
-        if ch not in hs:
-            hs[ch] = []
-            num_set.add(num[idx])
-        hs[ch].append(idx)
-    if len(num_set) != len(hs.keys()):
-        return False    
+            star_list.append(idx)
+        else:
+            if ch not in char_map:
+                char_map[ch] = []
+            char_map[ch].append(idx)
+    return char_map, star_list  
 
-    for idx_list in hs.values():
-        s = set(num[idx] for idx in idx_list)
-        if len(s) > 1:
-            return False
+num_str = '0123456789'
+result_set_order = set()
+result_set_not_order = set()
 
+for pattern, order in patterns:
+    char_map, star_list = init(pattern)
     if order:
-        pre = None
-        for key in sorted(hs.keys()):
-            if pre and ord(key) - ord(pre) == 1 and ord(num[hs[key][0]]) - ord(num[hs[pre][0]]) != 1:
-                return False
-            pre = key
-
-    return True
-#check('XXABCDYY', True, '13425333')
-#print(any(check(pattern[0], pattern[1], '88888878') for pattern in patterns))
-#result_set = set()
-#candidate_set = set(("%08d" % i) for i in range(100000000))
-arr = np.full(100000000,True,dtype=bool)
-for pattern in patterns:
-    i = 0
-    while i < 100000000:
-        if arr[i]:
-            sstr = "%08d" % i
-            if check(pattern[0], pattern[1], sstr):
-                print(sstr)
-                arr[i] = False
-        i += 1
+        res_list = sequence_gen(char_map, pattern)
+        set_stars(star_list, res_list, result_set_order)
+    else:
+        res_list = set_chars(char_map)
+        set_stars(star_list, res_list, result_set_not_order)
+    
+print("order")
+for _ in result_set_order:
+    if len(_) != 8:
+        print(_)
+print("not order")
+for _ in result_set_not_order:
+    if len(_) != 8:
+        print(_)
