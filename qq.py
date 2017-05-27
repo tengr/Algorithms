@@ -185,23 +185,26 @@ def init(pattern):
     return char_map, star_list  
 
 num_str = '0123456789'
-result_set_order = set()
-result_set_not_order = set()
+result_set = set()
 
 for pattern, order in patterns:
     char_map, star_list = init(pattern)
     if order:
         res_list = sequence_gen(char_map, pattern)
-        set_stars(star_list, res_list, result_set_order)
+        set_stars(star_list, res_list, result_set)
     else:
         res_list = set_chars(char_map)
-        set_stars(star_list, res_list, result_set_not_order)
-    
-print("order")
-for _ in result_set_order:
-    if len(_) != 8:
-        print(_)
-print("not order")
-for _ in result_set_not_order:
-    if len(_) != 8:
-        print(_)
+        set_stars(star_list, res_list, result_set)
+for result in result_set:
+    if len(result) != 8:
+        print ('ill formatted result')
+    print(result)
+
+# print("order")
+# for _ in result_set_order:
+#     if len(_) != 8:
+#         print(_)
+# print("not order")
+# for _ in result_set_not_order:
+#     if len(_) != 8:
+#         print(_)
