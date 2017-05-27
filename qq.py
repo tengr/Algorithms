@@ -150,10 +150,15 @@ def check(pattern, order, num):
     return True
 #check('XXABCDYY', True, '13425333')
 #print(any(check(pattern[0], pattern[1], '88888878') for pattern in patterns))
-result_set = set()
-candidate_set = set(("%08d" % i) for i in range(100000000))
+#result_set = set()
+#candidate_set = set(("%08d" % i) for i in range(100000000))
+arr = np.full(100000000,True,dtype=bool)
 for pattern in patterns:
-    for sstr in candidate_set.difference(result_set):
-        if check(pattern[0], pattern[1], sstr):
-            print(sstr)
-            result_set.add(sstr)
+    i = 0
+    while i < 100000000:
+        if arr[i]:
+            sstr = "%08d" % i
+            if check(pattern[0], pattern[1], sstr):
+                print(sstr)
+                arr[i] = False
+        i += 1
