@@ -1,3 +1,5 @@
+#! /usr/env/python
+import numpy as np
 patterns = [
     #无间隔
     ('AAAAAAAA', False),
@@ -122,43 +124,36 @@ patterns = [
 
 def check(pattern, order, num):
     hs = {}
+    num_set = set()
     for idx, ch in enumerate(pattern):
         if ch == '*':
             continue
         if ch not in hs:
             hs[ch] = []
+            num_set.add(num[idx])
         hs[ch].append(idx)
-    #print(hs)
+    if len(num_set) != len(hs.keys()):
+        return False    
+
     for idx_list in hs.values():
-        s = set()
-        for idx in idx_list:
-            s.add(num[idx])
-            if len(s) > 1:
-                return False
+        s = set(num[idx] for idx in idx_list)
+        if len(s) > 1:
+            return False
+
     if order:
-        keys = sorted(hs.keys())
         pre = None
-        for k in keys:
-            if pre:
-                if num[hs[pre][0]] >= num[hs[k][0]]:
-                    return False
-            pre = k
-    #print(hs)
-    #print(keys)
+        for key in sorted(hs.keys()):
+            if pre and ord(key) - ord(pre) == 1 and ord(num[hs[key][0]]) - ord(num[hs[pre][0]]) != 1:
+                return False
+            pre = key
+
     return True
 #check('XXABCDYY', True, '13425333')
-
-i = 0
-total = 0
-while i < 100000000:
-    sstr = "%08d" % i
-    #print (sstr)
-    # total += 1
-    # if total > 100:
-    #    break
-    if any(check(pattern[0], pattern[1], sstr) for pattern in patterns):
-        print(sstr)
-    i += 1
-#     # total += 1
-#     # if total > 100:
-#     #     break
+#print(any(check(pattern[0], pattern[1], '88888878') for pattern in patterns))
+result_set = set()
+candidate_set = set(("%08d" % i) for i in range(100000000))
+for pattern in patterns:
+    for sstr in candidate_set.difference(result_set):
+        if check(pattern[0], pattern[1], sstr):
+            print(sstr)
+            result_set.add(sstr)
