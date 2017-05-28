@@ -119,7 +119,7 @@ patterns = [
     ('DCBADCBA', True),
 
     #4位连续+2位重复
-    ('XXABCDYY', True),
+    ('XXABCDYY', None),
     ]
 
 def set_stars(star_list, arrs, result_set):
