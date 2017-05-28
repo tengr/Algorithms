@@ -145,6 +145,19 @@ def set_chars(char_map):
         res_list.append(arr)
     return res_list
 
+def set_chars_in_place(res_list):
+    res_list_total = []
+    for res in res_list:
+        char_map, star_list = init(res)
+        for permutation in permutations(num_str, len(char_map)):
+            arr = [ch for ch in res]
+            for ch, key in zip(permutation, char_map):
+                idx_list = char_map[key]
+                for idx in idx_list:
+                    arr[idx] = ch
+            res_list_total.append(arr)
+    return res_list_total
+
 def sequence_gen(char_map, pattern):
     res_list = []
     arr = [ch for ch in pattern]
@@ -178,7 +191,7 @@ def init(pattern):
     for idx, ch in enumerate(pattern):
         if ch == '*':
             star_list.append(idx)
-        else:
+        elif ch.isalpha():
             if ch not in char_map:
                 char_map[ch] = []
             char_map[ch].append(idx)
@@ -189,13 +202,20 @@ result_set = set()
 
 for pattern, order in patterns:
     char_map, star_list = init(pattern)
-    if order:
+    if order is None:
+        pattern = pattern.replace('X','Z')
+        char_map, star_list = init(pattern)
+        res_list = sequence_gen(char_map, pattern)
+        res_list_total = set_chars_in_place(res_list)
+        set_stars(star_list, res_list_total, result_set)
+    elif order:
         res_list = sequence_gen(char_map, pattern)
         set_stars(star_list, res_list, result_set)
     else:
         res_list = set_chars(char_map)
         set_stars(star_list, res_list, result_set)
-for result in result_set:
+
+for result in sorted(result_set):
     if len(result) != 8:
         print ('ill formatted result')
     print(result)
